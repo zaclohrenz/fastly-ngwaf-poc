@@ -1,0 +1,11 @@
+2026-11-12T21:52:35.395519701Z 2026/11/12 21:52:35.395435 Signal Sciences Agent 4.83.2 starting as user sigsci with PID 1, Max open files=2147483584, Max data size=unlimited, Max address space=unlimited, Max stack size=8388608
+2026-11-12T21:52:35.396364992Z 2026/11/12 21:52:35.396322 Starting HTTP engine startup probe endpoint: [::]:2024
+2026-11-12T21:52:35.396679283Z 2026/11/12 21:52:35.396633 =====================================================
+2026-11-12T21:52:35.396682533Z 2026/11/12 21:52:35.396637 Agent:     ingress-nginx-controller-7d6dfb4f4d-7vnpz
+2026-11-12T21:52:35.396683533Z 2026/11/12 21:52:35.396638 System:    alpine 3.24.3 (linux 7.1.4-200.fc44.aarch64)
+2026-11-12T21:52:35.396684158Z 2026/11/12 21:52:35.396639 Memory:    4.563G / 5.756G RAM available
+2026-11-12T21:52:35.396684867Z 2026/11/12 21:52:35.396639 CPU:       2 MaxProcs / 5 CPU cores available
+2026-11-12T21:52:35.396685492Z 2026/11/12 21:52:35.396640 =====================================================
+2026-11-12T21:53:35.459167981Z 2026/11/12 21:53:35.458853 Config update failed try 1: unable to update config: failed to download using cdn, direct and failover urls: unable to process request: Get "https://wafconf.signalsciences.net/4/00000000-0000-0000-0000-000000000000.conf": context deadline exceeded (Client.Timeout exceeded while awaiting headers), unable to process request: Get "https://sigsci-agent-wafconf.s3.amazonaws.com/4/00000000-0000-0000-0000-000000000000.conf": context deadline exceeded (Client.Timeout exceeded while awaiting headers), unable to process request: Get "https://sigsci-agent-wafconf-us-west-2.s3.amazonaws.com/4/00000000-0000-0000-0000-000000000000.conf": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2026-11-12T21:53:35.462349339Z 2026/11/12 21:53:35.462126 Started RPC listener on "unix:/sigsci/tmp/sigsci.sock"
+2026-11-12T21:53:50.461615558Z 2026/11/12 21:53:50.461455 Failed initial upload: upload failure: Post "https://c.signalsciences.net/0/push": context deadline exceeded (Client.Timeout exceeded while awaiting headers)

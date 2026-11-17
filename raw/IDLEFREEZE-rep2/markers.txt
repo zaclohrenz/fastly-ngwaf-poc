@@ -1,0 +1,9 @@
+1794529160.273 T0_scale_up (egress ALLOWED, no netpol)
+1794529161.313 pod_ip_assigned 10.244.0.150
+1794529161.396 poller_started
+1794529161.814 socket_created_seen_by_orchestrator
+1794529178.597 gen_SIGSTOP rc=0
+1794529187.165 agent_SIGSTOP pid=366558 rc=0
+1794529207.398 agent_SIGCONT rc=0
+1794529251.409 collect
+1794529254.537 done

@@ -1,0 +1,3 @@
+1794524852.311 ingress-nginx-controller   <none>   <none>
+1794524854.250 ingress-nginx-controller   <none>   10.244.0.81
+1794524933.651 ingress-nginx-controller   10.244.0.81   <none>

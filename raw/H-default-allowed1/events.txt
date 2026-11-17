@@ -1,0 +1,547 @@
+LAST                   NS                   TYPE      REASON                    OBJ                                           MSG
+<nil>                  default              Normal    Starting                  ngwaf-control-plane                           <none>
+2026-11-12T21:19:51Z   kube-system          Normal    Started                   kube-scheduler-ngwaf-control-plane            Started container kube-scheduler
+2026-11-12T21:19:51Z   default              Normal    NodeHasNoDiskPressure     ngwaf-control-plane                           Node ngwaf-control-plane status is now: NodeHasNoDiskPressure
+2026-11-12T21:19:51Z   default              Normal    NodeAllocatableEnforced   ngwaf-control-plane                           Updated Node Allocatable limit across pods
+2026-11-12T21:19:51Z   kube-system          Normal    Pulled                    kube-apiserver-ngwaf-control-plane            Container image "registry.k8s.io/kube-apiserver:v1.31.0" already present on machine
+2026-11-12T21:19:51Z   kube-system          Normal    Started                   kube-apiserver-ngwaf-control-plane            Started container kube-apiserver
+2026-11-12T21:19:51Z   default              Normal    NodeHasSufficientMemory   ngwaf-control-plane                           Node ngwaf-control-plane status is now: NodeHasSufficientMemory
+2026-11-12T21:19:51Z   default              Normal    NodeHasSufficientPID      ngwaf-control-plane                           Node ngwaf-control-plane status is now: NodeHasSufficientPID
+2026-11-12T21:19:51Z   kube-system          Normal    Created                   kube-apiserver-ngwaf-control-plane            Created container kube-apiserver
+2026-11-12T21:19:51Z   kube-system          Normal    Pulled                    kube-controller-manager-ngwaf-control-plane   Container image "registry.k8s.io/kube-controller-manager:v1.31.0" already present on machine
+2026-11-12T21:19:51Z   kube-system          Normal    Started                   kube-controller-manager-ngwaf-control-plane   Started container kube-controller-manager
+2026-11-12T21:19:51Z   kube-system          Normal    Created                   kube-controller-manager-ngwaf-control-plane   Created container kube-controller-manager
+2026-11-12T21:19:51Z   kube-system          Normal    Created                   kube-scheduler-ngwaf-control-plane            Created container kube-scheduler
+2026-11-12T21:19:51Z   kube-system          Normal    Pulled                    kube-scheduler-ngwaf-control-plane            Container image "registry.k8s.io/kube-scheduler:v1.31.0" already present on machine
+2026-11-12T21:19:51Z   kube-system          Normal    Pulled                    etcd-ngwaf-control-plane                      Container image "registry.k8s.io/etcd:3.5.15-0" already present on machine
+2026-11-12T21:19:52Z   kube-system          Normal    Created                   etcd-ngwaf-control-plane                      Created container etcd
+2026-11-12T21:19:52Z   kube-system          Normal    Started                   etcd-ngwaf-control-plane                      Started container etcd
+2026-11-12T21:19:55Z   default              Normal    NodeHasNoDiskPressure     ngwaf-control-plane                           Node ngwaf-control-plane status is now: NodeHasNoDiskPressure
+2026-11-12T21:19:55Z   default              Normal    NodeHasSufficientPID      ngwaf-control-plane                           Node ngwaf-control-plane status is now: NodeHasSufficientPID
+2026-11-12T21:19:55Z   default              Normal    NodeHasSufficientMemory   ngwaf-control-plane                           Node ngwaf-control-plane status is now: NodeHasSufficientMemory
+2026-11-12T21:19:55Z   default              Normal    NodeAllocatableEnforced   ngwaf-control-plane                           Updated Node Allocatable limit across pods
+2026-11-12T21:19:55Z   default              Normal    Starting                  ngwaf-control-plane                           Starting kubelet.
+2026-11-12T21:19:56Z   kube-system          Normal    LeaderElection            kube-scheduler                                ngwaf-control-plane_0cceddae-efb2-4a81-b6ea-5de1899cb331 became leader
+2026-11-12T21:19:57Z   kube-system          Normal    LeaderElection            kube-controller-manager                       ngwaf-control-plane_16d957c3-6fcc-4d9c-b5c3-ca54fb1a7fb7 became leader
+2026-11-12T21:20:02Z   kube-system          Normal    Scheduled                 kube-proxy-jgrqj                              Successfully assigned kube-system/kube-proxy-jgrqj to ngwaf-control-plane
+2026-11-12T21:20:02Z   kube-system          Normal    SuccessfulCreate          kube-proxy                                    Created pod: kube-proxy-jgrqj
+2026-11-12T21:20:02Z   kube-system          Normal    Scheduled                 kindnet-7ctd9                                 Successfully assigned kube-system/kindnet-7ctd9 to ngwaf-control-plane
+2026-11-12T21:20:02Z   default              Normal    RegisteredNode            ngwaf-control-plane                           Node ngwaf-control-plane event: Registered Node ngwaf-control-plane in Controller
+2026-11-12T21:20:02Z   kube-system          Normal    SuccessfulCreate          kindnet                                       Created pod: kindnet-7ctd9
+2026-11-12T21:20:03Z   kube-system          Normal    Pulled                    kindnet-7ctd9                                 Container image "docker.io/kindest/kindnetd:v20241108-5c6d2daf" already present on machine
+2026-11-12T21:20:03Z   local-path-storage   Normal    ScalingReplicaSet         local-path-provisioner                        Scaled up replica set local-path-provisioner-ccc7bf7fc to 1
+2026-11-12T21:20:03Z   local-path-storage   Warning   FailedScheduling          local-path-provisioner-ccc7bf7fc-ctdbg        0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+2026-11-12T21:20:03Z   kube-system          Warning   FailedMount               kindnet-7ctd9                                 MountVolume.SetUp failed for volume "kube-api-access-lvnm2" : configmap "kube-root-ca.crt" not found
+2026-11-12T21:20:03Z   kube-system          Normal    ScalingReplicaSet         coredns                                       Scaled up replica set coredns-6f6b679f8f to 2
+2026-11-12T21:20:03Z   kube-system          Normal    SuccessfulCreate          coredns-6f6b679f8f                            Created pod: coredns-6f6b679f8f-f97sk
+2026-11-12T21:20:03Z   kube-system          Normal    SuccessfulCreate          coredns-6f6b679f8f                            Created pod: coredns-6f6b679f8f-4sz29
+2026-11-12T21:20:03Z   kube-system          Warning   FailedScheduling          coredns-6f6b679f8f-4sz29                      0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+2026-11-12T21:20:03Z   kube-system          Warning   FailedMount               kube-proxy-jgrqj                              MountVolume.SetUp failed for volume "kube-api-access-wlvfs" : configmap "kube-root-ca.crt" not found
+2026-11-12T21:20:03Z   kube-system          Warning   FailedScheduling          coredns-6f6b679f8f-f97sk                      0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+2026-11-12T21:20:03Z   local-path-storage   Normal    SuccessfulCreate          local-path-provisioner-ccc7bf7fc              Created pod: local-path-provisioner-ccc7bf7fc-ctdbg
+2026-11-12T21:20:04Z   kube-system          Normal    Created                   kube-proxy-jgrqj                              Created container kube-proxy
+2026-11-12T21:20:04Z   kube-system          Normal    Started                   kindnet-7ctd9                                 Started container kindnet-cni
+2026-11-12T21:20:04Z   kube-system          Normal    Pulled                    kube-proxy-jgrqj                              Container image "registry.k8s.io/kube-proxy:v1.31.0" already present on machine
+2026-11-12T21:20:04Z   kube-system          Warning   FailedMount               kube-proxy-jgrqj                              MountVolume.SetUp failed for volume "kube-proxy" : failed to sync configmap cache: timed out waiting for the condition
+2026-11-12T21:20:04Z   kube-system          Normal    Created                   kindnet-7ctd9                                 Created container kindnet-cni
+2026-11-12T21:20:05Z   kube-system          Normal    Started                   kube-proxy-jgrqj                              Started container kube-proxy
+2026-11-12T21:20:14Z   kube-system          Normal    Scheduled                 coredns-6f6b679f8f-4sz29                      Successfully assigned kube-system/coredns-6f6b679f8f-4sz29 to ngwaf-control-plane
+2026-11-12T21:20:14Z   kube-system          Normal    Scheduled                 coredns-6f6b679f8f-f97sk                      Successfully assigned kube-system/coredns-6f6b679f8f-f97sk to ngwaf-control-plane
+2026-11-12T21:20:14Z   local-path-storage   Normal    Scheduled                 local-path-provisioner-ccc7bf7fc-ctdbg        Successfully assigned local-path-storage/local-path-provisioner-ccc7bf7fc-ctdbg to ngwaf-control-plane
+2026-11-12T21:20:14Z   default              Normal    NodeReady                 ngwaf-control-plane                           Node ngwaf-control-plane status is now: NodeReady
+2026-11-12T21:20:15Z   local-path-storage   Normal    Started                   local-path-provisioner-ccc7bf7fc-ctdbg        Started container local-path-provisioner
+2026-11-12T21:20:15Z   kube-system          Normal    Started                   coredns-6f6b679f8f-4sz29                      Started container coredns
+2026-11-12T21:20:15Z   local-path-storage   Normal    Created                   local-path-provisioner-ccc7bf7fc-ctdbg        Created container local-path-provisioner
+2026-11-12T21:20:15Z   kube-system          Normal    Created                   coredns-6f6b679f8f-4sz29                      Created container coredns
+2026-11-12T21:20:15Z   kube-system          Normal    Pulled                    coredns-6f6b679f8f-f97sk                      Container image "registry.k8s.io/coredns/coredns:v1.11.1" already present on machine
+2026-11-12T21:20:15Z   kube-system          Normal    Started                   coredns-6f6b679f8f-f97sk                      Started container coredns
+2026-11-12T21:20:15Z   kube-system          Normal    Pulled                    coredns-6f6b679f8f-4sz29                      Container image "registry.k8s.io/coredns/coredns:v1.11.1" already present on machine
+2026-11-12T21:20:15Z   local-path-storage   Normal    Pulled                    local-path-provisioner-ccc7bf7fc-ctdbg        Container image "docker.io/kindest/local-path-provisioner:v20241108-5c6d2daf" already present on machine
+2026-11-12T21:20:15Z   kube-system          Normal    Created                   coredns-6f6b679f8f-f97sk                      Created container coredns
+2026-11-12T21:23:27Z   ngwaf                Normal    ScalingReplicaSet         echo                                          Scaled up replica set echo-7745567f96 to 1
+2026-11-12T21:23:27Z   ngwaf                Normal    SuccessfulCreate          gen-5b8fbb46f5                                Created pod: gen-5b8fbb46f5-c7r94
+2026-11-12T21:23:27Z   ngwaf                Normal    Scheduled                 gen-5b8fbb46f5-c7r94                          Successfully assigned ngwaf/gen-5b8fbb46f5-c7r94 to ngwaf-control-plane
+2026-11-12T21:23:27Z   ngwaf                Normal    SuccessfulCreate          echo-7745567f96                               Created pod: echo-7745567f96-bbkg7
+2026-11-12T21:23:27Z   ngwaf                Normal    Started                   echo-7745567f96-bbkg7                         Started container echo
+2026-11-12T21:23:27Z   ngwaf                Normal    ScalingReplicaSet         gen                                           Scaled up replica set gen-5b8fbb46f5 to 1
+2026-11-12T21:23:27Z   ngwaf                Normal    Scheduled                 echo-7745567f96-bbkg7                         Successfully assigned ngwaf/echo-7745567f96-bbkg7 to ngwaf-control-plane
+2026-11-12T21:23:27Z   ngwaf                Normal    Pulled                    echo-7745567f96-bbkg7                         Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:23:27Z   ngwaf                Normal    Created                   echo-7745567f96-bbkg7                         Created container echo
+2026-11-12T21:23:28Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-86c54c46c5           Created pod: ingress-nginx-controller-86c54c46c5-7c8hb
+2026-11-12T21:23:28Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-86c54c46c5-7c8hb     Successfully assigned ingress-nginx/ingress-nginx-controller-86c54c46c5-7c8hb to ngwaf-control-plane
+2026-11-12T21:23:28Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-86c54c46c5-7c8hb     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:23:28Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-86c54c46c5-7c8hb     Created container sigsci-agent
+2026-11-12T21:23:28Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-86c54c46c5-7c8hb     Started container sigsci-agent
+2026-11-12T21:23:28Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled up replica set ingress-nginx-controller-86c54c46c5 to 1
+2026-11-12T21:25:29Z   ingress-nginx        Warning   ErrImageNeverPull         ingress-nginx-controller-86c54c46c5-7c8hb     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0@sha256:594ceea76b01c592858f803f9ff4d2cb40542cae2060410b2c95f75907d659e1" is not present with pull policy of Never
+2026-11-12T21:25:29Z   ingress-nginx        Warning   Failed                    ingress-nginx-controller-86c54c46c5-7c8hb     Error: ErrImageNeverPull
+2026-11-12T21:26:11Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-586df55c85-llxgt     Created container controller
+2026-11-12T21:26:11Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-586df55c85           Created pod: ingress-nginx-controller-586df55c85-llxgt
+2026-11-12T21:26:11Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled up replica set ingress-nginx-controller-586df55c85 to 1
+2026-11-12T21:26:11Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-586df55c85-llxgt     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:26:11Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-586df55c85-llxgt     Successfully assigned ingress-nginx/ingress-nginx-controller-586df55c85-llxgt to ngwaf-control-plane
+2026-11-12T21:26:12Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-586df55c85-llxgt     Started container sigsci-agent
+2026-11-12T21:26:12Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-586df55c85-llxgt     Created container sigsci-agent
+2026-11-12T21:26:12Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:26:12Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-586df55c85-llxgt     Started container controller
+2026-11-12T21:26:12Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-586df55c85-llxgt     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:26:13Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:26:13Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-586df55c85-llxgt     NGINX reload triggered due to a change in configuration
+2026-11-12T21:26:31Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-86c54c46c5           Deleted pod: ingress-nginx-controller-86c54c46c5-7c8hb
+2026-11-12T21:26:31Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled down replica set ingress-nginx-controller-86c54c46c5 to 0 from 1
+2026-11-12T21:26:40Z   ngwaf                Normal    Started                   echo-6bd7579849-f58ns                         Started container echo
+2026-11-12T21:26:40Z   ngwaf                Normal    SuccessfulCreate          echo-6bd7579849                               Created pod: echo-6bd7579849-f58ns
+2026-11-12T21:26:40Z   ngwaf                Normal    Pulled                    echo-6bd7579849-f58ns                         Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:26:40Z   ngwaf                Normal    Created                   echo-6bd7579849-f58ns                         Created container echo
+2026-11-12T21:26:40Z   ngwaf                Normal    Scheduled                 echo-6bd7579849-f58ns                         Successfully assigned ngwaf/echo-6bd7579849-f58ns to ngwaf-control-plane
+2026-11-12T21:26:40Z   ngwaf                Normal    ScalingReplicaSet         echo                                          Scaled up replica set echo-6bd7579849 to 1
+2026-11-12T21:26:41Z   ngwaf                Normal    Killing                   echo-7745567f96-bbkg7                         Stopping container echo
+2026-11-12T21:26:41Z   ngwaf                Normal    ScalingReplicaSet         echo                                          Scaled down replica set echo-7745567f96 to 0 from 1
+2026-11-12T21:26:41Z   ngwaf                Normal    SuccessfulDelete          echo-7745567f96                               Deleted pod: echo-7745567f96-bbkg7
+2026-11-12T21:27:15Z   ngwaf                Normal    Pulled                    echo-6c7fc6b888-drl6k                         Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:27:15Z   ngwaf                Normal    SuccessfulCreate          echo-6c7fc6b888                               Created pod: echo-6c7fc6b888-drl6k
+2026-11-12T21:27:15Z   ngwaf                Normal    Started                   echo-6c7fc6b888-drl6k                         Started container echo
+2026-11-12T21:27:15Z   ngwaf                Normal    Scheduled                 echo-6c7fc6b888-drl6k                         Successfully assigned ngwaf/echo-6c7fc6b888-drl6k to ngwaf-control-plane
+2026-11-12T21:27:15Z   ngwaf                Normal    ScalingReplicaSet         echo                                          Scaled up replica set echo-6c7fc6b888 to 1
+2026-11-12T21:27:15Z   ngwaf                Normal    Created                   echo-6c7fc6b888-drl6k                         Created container echo
+2026-11-12T21:27:16Z   ngwaf                Normal    SuccessfulDelete          echo-6bd7579849                               Deleted pod: echo-6bd7579849-f58ns
+2026-11-12T21:27:16Z   ngwaf                Normal    ScalingReplicaSet         echo                                          Scaled down replica set echo-6bd7579849 to 0 from 1
+2026-11-12T21:27:16Z   ngwaf                Normal    Killing                   echo-6bd7579849-f58ns                         Stopping container echo
+2026-11-12T21:27:48Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-586df55c85           Deleted pod: ingress-nginx-controller-586df55c85-llxgt
+2026-11-12T21:27:48Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-586df55c85-llxgt     Stopping container controller
+2026-11-12T21:27:48Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-586df55c85-llxgt     Stopping container sigsci-agent
+2026-11-12T21:27:51Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-586df55c85-llxgt     Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T21:28:01Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-586df55c85-llxgt     Readiness probe failed: Get "http://10.244.0.8:10254/healthz": dial tcp 10.244.0.8:10254: connect: connection refused
+2026-11-12T21:28:10Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-586df55c85           Created pod: ingress-nginx-controller-586df55c85-mt6b9
+2026-11-12T21:28:10Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-586df55c85-mt6b9     Successfully assigned ingress-nginx/ingress-nginx-controller-586df55c85-mt6b9 to ngwaf-control-plane
+2026-11-12T21:28:11Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-586df55c85-mt6b9     Created container controller
+2026-11-12T21:28:11Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-586df55c85-mt6b9     Created container sigsci-agent
+2026-11-12T21:28:11Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-586df55c85-mt6b9     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:28:11Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-586df55c85-mt6b9     Started container controller
+2026-11-12T21:28:11Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-586df55c85-mt6b9     Started container sigsci-agent
+2026-11-12T21:28:11Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-586df55c85-mt6b9     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:28:11Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:28:12Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-586df55c85-mt6b9     NGINX reload triggered due to a change in configuration
+2026-11-12T21:28:52Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:30:25Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-55fb7d45d9           Created pod: ingress-nginx-controller-55fb7d45d9-dn8wh
+2026-11-12T21:30:25Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-55fb7d45d9-dn8wh     Successfully assigned ingress-nginx/ingress-nginx-controller-55fb7d45d9-dn8wh to ngwaf-control-plane
+2026-11-12T21:30:25Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled up replica set ingress-nginx-controller-55fb7d45d9 to 1
+2026-11-12T21:30:26Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-586df55c85-mt6b9     Stopping container controller
+2026-11-12T21:30:26Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-586df55c85-mt6b9     Stopping container sigsci-agent
+2026-11-12T21:30:26Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-586df55c85           Deleted pod: ingress-nginx-controller-586df55c85-mt6b9
+2026-11-12T21:30:26Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-55fb7d45d9           Deleted pod: ingress-nginx-controller-55fb7d45d9-dn8wh
+2026-11-12T21:30:26Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled down replica set ingress-nginx-controller-586df55c85 to 0 from 1
+2026-11-12T21:30:31Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-586df55c85-mt6b9     Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T21:30:41Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-586df55c85-mt6b9     Readiness probe failed: Get "http://10.244.0.11:10254/healthz": dial tcp 10.244.0.11:10254: connect: connection refused
+2026-11-12T21:30:48Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-55fb7d45d9-xxm5k     Successfully assigned ingress-nginx/ingress-nginx-controller-55fb7d45d9-xxm5k to ngwaf-control-plane
+2026-11-12T21:30:48Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-xxm5k     Created container wait-egress-blocked
+2026-11-12T21:30:48Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-55fb7d45d9           Created pod: ingress-nginx-controller-55fb7d45d9-xxm5k
+2026-11-12T21:30:48Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-xxm5k     Started container wait-egress-blocked
+2026-11-12T21:30:48Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-xxm5k     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:31:02Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-xxm5k     Started container controller
+2026-11-12T21:31:02Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-xxm5k     Created container sigsci-agent
+2026-11-12T21:31:02Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-xxm5k     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:31:02Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-xxm5k     Created container controller
+2026-11-12T21:31:02Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-xxm5k     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:31:03Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:31:03Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-xxm5k     Started container sigsci-agent
+2026-11-12T21:31:04Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-55fb7d45d9-xxm5k     NGINX reload triggered due to a change in configuration
+2026-11-12T21:31:04Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:32:28Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-7d6dfb4f4d           Deleted pod: ingress-nginx-controller-7d6dfb4f4d-lq2wd
+2026-11-12T21:32:28Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-xxm5k     Stopping container controller
+2026-11-12T21:32:28Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-xxm5k     Stopping container sigsci-agent
+2026-11-12T21:32:28Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled up replica set ingress-nginx-controller-7d6dfb4f4d to 1
+2026-11-12T21:32:28Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-7d6dfb4f4d           Created pod: ingress-nginx-controller-7d6dfb4f4d-lq2wd
+2026-11-12T21:32:28Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-55fb7d45d9           Deleted pod: ingress-nginx-controller-55fb7d45d9-xxm5k
+2026-11-12T21:32:28Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-7d6dfb4f4d-lq2wd     Successfully assigned ingress-nginx/ingress-nginx-controller-7d6dfb4f4d-lq2wd to ngwaf-control-plane
+2026-11-12T21:32:38Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-55fb7d45d9-xxm5k     Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T21:32:50Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-srqz7     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:32:50Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-srqz7     Started container wait-egress-blocked
+2026-11-12T21:32:50Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-srqz7     Created container wait-egress-blocked
+2026-11-12T21:32:50Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-7d6dfb4f4d           Created pod: ingress-nginx-controller-7d6dfb4f4d-srqz7
+2026-11-12T21:32:50Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-7d6dfb4f4d-srqz7     Successfully assigned ingress-nginx/ingress-nginx-controller-7d6dfb4f4d-srqz7 to ngwaf-control-plane
+2026-11-12T21:32:51Z   ngwaf                Normal    Scheduled                 poller                                        Successfully assigned ngwaf/poller to ngwaf-control-plane
+2026-11-12T21:32:51Z   ngwaf                Normal    Pulled                    poller                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:32:51Z   ngwaf                Normal    Started                   poller                                        Started container poller
+2026-11-12T21:32:51Z   ngwaf                Normal    Created                   poller                                        Created container poller
+2026-11-12T21:33:05Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-srqz7     Created container controller
+2026-11-12T21:33:05Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-srqz7     Created container sigsci-agent
+2026-11-12T21:33:05Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-srqz7     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:33:05Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-srqz7     Started container controller
+2026-11-12T21:33:05Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:33:05Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-srqz7     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:33:05Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-srqz7     Started container sigsci-agent
+2026-11-12T21:33:06Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-7d6dfb4f4d-srqz7     NGINX reload triggered due to a change in configuration
+2026-11-12T21:33:06Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:33:36Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-7d6dfb4f4d-srqz7     Startup probe failed: HTTP probe failed with statuscode: 503
+2026-11-12T21:34:06Z   ngwaf                Normal    Killing                   poller                                        Stopping container poller
+2026-11-12T21:34:27Z   ngwaf                Normal    Scheduled                 statsd                                        Successfully assigned ngwaf/statsd to ngwaf-control-plane
+2026-11-12T21:34:27Z   ngwaf                Normal    Created                   statsd                                        Created container statsd
+2026-11-12T21:34:27Z   ngwaf                Normal    Pulled                    statsd                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:34:28Z   ngwaf                Normal    Started                   statsd                                        Started container statsd
+2026-11-12T21:34:35Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-557b447d5d           Deleted pod: ingress-nginx-controller-557b447d5d-6lhsd
+2026-11-12T21:34:35Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-557b447d5d-6lhsd     Successfully assigned ingress-nginx/ingress-nginx-controller-557b447d5d-6lhsd to ngwaf-control-plane
+2026-11-12T21:34:35Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-557b447d5d           Created pod: ingress-nginx-controller-557b447d5d-6lhsd
+2026-11-12T21:34:35Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-7d6dfb4f4d           Deleted pod: ingress-nginx-controller-7d6dfb4f4d-srqz7
+2026-11-12T21:34:57Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-557b447d5d-7642b     Successfully assigned ingress-nginx/ingress-nginx-controller-557b447d5d-7642b to ngwaf-control-plane
+2026-11-12T21:34:57Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-557b447d5d           Created pod: ingress-nginx-controller-557b447d5d-7642b
+2026-11-12T21:34:58Z   ngwaf                Normal    Scheduled                 poller                                        Successfully assigned ngwaf/poller to ngwaf-control-plane
+2026-11-12T21:34:58Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-557b447d5d-7642b     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:34:58Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-557b447d5d-7642b     Created container wait-egress-blocked
+2026-11-12T21:34:58Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-557b447d5d-7642b     Started container wait-egress-blocked
+2026-11-12T21:34:59Z   ngwaf                Normal    Pulled                    poller                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:34:59Z   ngwaf                Normal    Created                   poller                                        Created container poller
+2026-11-12T21:34:59Z   ngwaf                Normal    Started                   poller                                        Started container poller
+2026-11-12T21:35:12Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-557b447d5d-7642b     Created container controller
+2026-11-12T21:35:12Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:35:12Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-557b447d5d-7642b     Started container controller
+2026-11-12T21:35:12Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-557b447d5d-7642b     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:35:12Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-557b447d5d-7642b     Created container sigsci-agent
+2026-11-12T21:35:12Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-557b447d5d-7642b     Started container sigsci-agent
+2026-11-12T21:35:12Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-557b447d5d-7642b     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:35:13Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:35:14Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-557b447d5d-7642b     NGINX reload triggered due to a change in configuration
+2026-11-12T21:35:44Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-557b447d5d-7642b     Startup probe failed: HTTP probe failed with statuscode: 503
+2026-11-12T21:36:29Z   ngwaf                Normal    Killing                   poller                                        Stopping container poller
+2026-11-12T21:36:51Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-557b447d5d           Deleted pod: ingress-nginx-controller-557b447d5d-7642b
+2026-11-12T21:37:13Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-557b447d5d-972ql     Started container wait-egress-blocked
+2026-11-12T21:37:13Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled up replica set ingress-nginx-controller-557b447d5d to 1 from 0
+2026-11-12T21:37:13Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-557b447d5d-972ql     Created container wait-egress-blocked
+2026-11-12T21:37:13Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-557b447d5d           Created pod: ingress-nginx-controller-557b447d5d-972ql
+2026-11-12T21:37:13Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-557b447d5d-972ql     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:37:13Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-557b447d5d-972ql     Successfully assigned ingress-nginx/ingress-nginx-controller-557b447d5d-972ql to ngwaf-control-plane
+2026-11-12T21:37:14Z   ngwaf                Normal    Scheduled                 poller                                        Successfully assigned ngwaf/poller to ngwaf-control-plane
+2026-11-12T21:37:14Z   ngwaf                Normal    Pulled                    poller                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:37:14Z   ngwaf                Normal    Started                   poller                                        Started container poller
+2026-11-12T21:37:14Z   ngwaf                Normal    Created                   poller                                        Created container poller
+2026-11-12T21:39:19Z   ngwaf                Normal    Created                   gen-5b8fbb46f5-c7r94                          Created container gen
+2026-11-12T21:39:19Z   ngwaf                Normal    Pulled                    gen-5b8fbb46f5-c7r94                          Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:39:19Z   ngwaf                Normal    Started                   gen-5b8fbb46f5-c7r94                          Started container gen
+2026-11-12T21:39:24Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-557b447d5d-972ql     Started container sigsci-agent
+2026-11-12T21:39:24Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-557b447d5d-972ql     Created container sigsci-agent
+2026-11-12T21:39:24Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-557b447d5d-972ql     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:39:24Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-557b447d5d-972ql     Started container controller
+2026-11-12T21:39:24Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-557b447d5d-972ql     Created container controller
+2026-11-12T21:39:24Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-557b447d5d-972ql     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:39:24Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:39:25Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-557b447d5d-972ql     NGINX reload triggered due to a change in configuration
+2026-11-12T21:39:56Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-557b447d5d-972ql     Startup probe failed: HTTP probe failed with statuscode: 503
+2026-11-12T21:40:08Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:41:40Z   ngwaf                Normal    Killing                   poller                                        Stopping container poller
+2026-11-12T21:42:05Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-55fb7d45d9           Created pod: ingress-nginx-controller-55fb7d45d9-wtkzs
+2026-11-12T21:42:05Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-55fb7d45d9           Deleted pod: ingress-nginx-controller-55fb7d45d9-wtkzs
+2026-11-12T21:42:05Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled down replica set ingress-nginx-controller-557b447d5d to 0 from 1
+2026-11-12T21:42:05Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-55fb7d45d9-wtkzs     Successfully assigned ingress-nginx/ingress-nginx-controller-55fb7d45d9-wtkzs to ngwaf-control-plane
+2026-11-12T21:42:05Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-557b447d5d           Deleted pod: ingress-nginx-controller-557b447d5d-972ql
+2026-11-12T21:42:27Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-55fb7d45d9           Created pod: ingress-nginx-controller-55fb7d45d9-6vzm6
+2026-11-12T21:42:27Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-55fb7d45d9-6vzm6     Successfully assigned ingress-nginx/ingress-nginx-controller-55fb7d45d9-6vzm6 to ngwaf-control-plane
+2026-11-12T21:42:28Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-6vzm6     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:42:28Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-6vzm6     Created container wait-egress-blocked
+2026-11-12T21:42:28Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-6vzm6     Started container wait-egress-blocked
+2026-11-12T21:42:42Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-6vzm6     Created container controller
+2026-11-12T21:42:42Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-6vzm6     Created container sigsci-agent
+2026-11-12T21:42:42Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-6vzm6     Started container sigsci-agent
+2026-11-12T21:42:42Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-6vzm6     Started container controller
+2026-11-12T21:42:42Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-6vzm6     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:42:42Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:42:42Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-6vzm6     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:42:43Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:42:44Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-55fb7d45d9-6vzm6     NGINX reload triggered due to a change in configuration
+2026-11-12T21:43:04Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-55fb7d45d9           Deleted pod: ingress-nginx-controller-55fb7d45d9-6vzm6
+2026-11-12T21:43:04Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-6vzm6     Stopping container sigsci-agent
+2026-11-12T21:43:04Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-6vzm6     Stopping container controller
+2026-11-12T21:43:08Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-55fb7d45d9-6vzm6     Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T21:43:21Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-55fb7d45d9           Created pod: ingress-nginx-controller-55fb7d45d9-5mssv
+2026-11-12T21:43:21Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-55fb7d45d9-5mssv     Successfully assigned ingress-nginx/ingress-nginx-controller-55fb7d45d9-5mssv to ngwaf-control-plane
+2026-11-12T21:43:22Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-5mssv     Started container wait-egress-blocked
+2026-11-12T21:43:22Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-5mssv     Created container wait-egress-blocked
+2026-11-12T21:43:22Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-5mssv     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:43:36Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-5mssv     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:43:36Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-5mssv     Created container controller
+2026-11-12T21:43:36Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-5mssv     Created container sigsci-agent
+2026-11-12T21:43:36Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:43:36Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-5mssv     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:43:36Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-5mssv     Started container sigsci-agent
+2026-11-12T21:43:36Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-5mssv     Started container controller
+2026-11-12T21:43:38Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:43:38Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-55fb7d45d9-5mssv     NGINX reload triggered due to a change in configuration
+2026-11-12T21:44:02Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-55fb7d45d9           Deleted pod: ingress-nginx-controller-55fb7d45d9-5mssv
+2026-11-12T21:44:02Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-5mssv     Stopping container sigsci-agent
+2026-11-12T21:44:02Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-5mssv     Stopping container controller
+2026-11-12T21:44:12Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-55fb7d45d9-5mssv     Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T21:44:20Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-l8gzc     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:44:20Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-55fb7d45d9           Created pod: ingress-nginx-controller-55fb7d45d9-l8gzc
+2026-11-12T21:44:20Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-55fb7d45d9-l8gzc     Successfully assigned ingress-nginx/ingress-nginx-controller-55fb7d45d9-l8gzc to ngwaf-control-plane
+2026-11-12T21:44:20Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-l8gzc     Created container wait-egress-blocked
+2026-11-12T21:44:20Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-l8gzc     Started container wait-egress-blocked
+2026-11-12T21:44:35Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-l8gzc     Created container sigsci-agent
+2026-11-12T21:44:35Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:44:35Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-l8gzc     Started container sigsci-agent
+2026-11-12T21:44:35Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-l8gzc     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:44:35Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-l8gzc     Created container controller
+2026-11-12T21:44:35Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-l8gzc     Started container controller
+2026-11-12T21:44:35Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-l8gzc     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:44:36Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-55fb7d45d9-l8gzc     NGINX reload triggered due to a change in configuration
+2026-11-12T21:45:10Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:45:54Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-55fb7d45d9           Deleted pod: ingress-nginx-controller-55fb7d45d9-l8gzc
+2026-11-12T21:45:54Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled down replica set ingress-nginx-controller-55fb7d45d9 to 0 from 1
+2026-11-12T21:45:54Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-l8gzc     Stopping container controller
+2026-11-12T21:45:54Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-l8gzc     Stopping container sigsci-agent
+2026-11-12T21:46:00Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-55fb7d45d9-l8gzc     Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T21:46:16Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-55fb7d45d9-n6bdj     Successfully assigned ingress-nginx/ingress-nginx-controller-55fb7d45d9-n6bdj to ngwaf-control-plane
+2026-11-12T21:46:16Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-n6bdj     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:46:16Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-n6bdj     Created container wait-egress-blocked
+2026-11-12T21:46:16Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-n6bdj     Started container wait-egress-blocked
+2026-11-12T21:46:16Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-55fb7d45d9           Created pod: ingress-nginx-controller-55fb7d45d9-n6bdj
+2026-11-12T21:46:31Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-n6bdj     Started container controller
+2026-11-12T21:46:31Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-n6bdj     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:46:31Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:46:31Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-n6bdj     Started container sigsci-agent
+2026-11-12T21:46:31Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-n6bdj     Created container sigsci-agent
+2026-11-12T21:46:31Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-n6bdj     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:46:31Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-n6bdj     Created container controller
+2026-11-12T21:46:32Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-55fb7d45d9-n6bdj     NGINX reload triggered due to a change in configuration
+2026-11-12T21:47:15Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:47:50Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-55fb7d45d9           Deleted pod: ingress-nginx-controller-55fb7d45d9-n6bdj
+2026-11-12T21:47:50Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-n6bdj     Stopping container controller
+2026-11-12T21:47:50Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-n6bdj     Stopping container sigsci-agent
+2026-11-12T21:47:56Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-55fb7d45d9-n6bdj     Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T21:48:12Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-55fb7d45d9           Created pod: ingress-nginx-controller-55fb7d45d9-w8m5p
+2026-11-12T21:48:12Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-w8m5p     Created container wait-egress-blocked
+2026-11-12T21:48:12Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-w8m5p     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:48:12Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-55fb7d45d9-w8m5p     Successfully assigned ingress-nginx/ingress-nginx-controller-55fb7d45d9-w8m5p to ngwaf-control-plane
+2026-11-12T21:48:13Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-w8m5p     Started container wait-egress-blocked
+2026-11-12T21:48:27Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:48:27Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-w8m5p     Created container sigsci-agent
+2026-11-12T21:48:27Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-w8m5p     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:48:27Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-w8m5p     Started container controller
+2026-11-12T21:48:27Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-w8m5p     Started container sigsci-agent
+2026-11-12T21:48:27Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-w8m5p     Created container controller
+2026-11-12T21:48:27Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-w8m5p     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:48:28Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-55fb7d45d9-w8m5p     NGINX reload triggered due to a change in configuration
+2026-11-12T21:49:05Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:49:46Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-7d6dfb4f4d-8zxmw     Successfully assigned ingress-nginx/ingress-nginx-controller-7d6dfb4f4d-8zxmw to ngwaf-control-plane
+2026-11-12T21:49:46Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-55fb7d45d9           Deleted pod: ingress-nginx-controller-55fb7d45d9-w8m5p
+2026-11-12T21:49:46Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-7d6dfb4f4d           Created pod: ingress-nginx-controller-7d6dfb4f4d-8zxmw
+2026-11-12T21:49:46Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-7d6dfb4f4d           Deleted pod: ingress-nginx-controller-7d6dfb4f4d-8zxmw
+2026-11-12T21:49:46Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-w8m5p     Stopping container sigsci-agent
+2026-11-12T21:49:46Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-w8m5p     Stopping container controller
+2026-11-12T21:49:52Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-55fb7d45d9-w8m5p     Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T21:50:08Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-7d6dfb4f4d           Created pod: ingress-nginx-controller-7d6dfb4f4d-r65s6
+2026-11-12T21:50:08Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-7d6dfb4f4d-r65s6     Successfully assigned ingress-nginx/ingress-nginx-controller-7d6dfb4f4d-r65s6 to ngwaf-control-plane
+2026-11-12T21:50:09Z   ingress-nginx        Warning   FailedMount               ingress-nginx-controller-7d6dfb4f4d-r65s6     MountVolume.SetUp failed for volume "kube-api-access-f85nk" : failed to sync configmap cache: timed out waiting for the condition
+2026-11-12T21:50:10Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-r65s6     Started container wait-egress-blocked
+2026-11-12T21:50:10Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-r65s6     Created container wait-egress-blocked
+2026-11-12T21:50:10Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-r65s6     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:50:11Z   ngwaf                Normal    Pulled                    poller                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:50:11Z   ngwaf                Normal    Started                   poller                                        Started container poller
+2026-11-12T21:50:11Z   ngwaf                Normal    Created                   poller                                        Created container poller
+2026-11-12T21:50:11Z   ngwaf                Normal    Scheduled                 poller                                        Successfully assigned ngwaf/poller to ngwaf-control-plane
+2026-11-12T21:50:24Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-r65s6     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:50:24Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-r65s6     Started container sigsci-agent
+2026-11-12T21:50:24Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-r65s6     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:50:24Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-r65s6     Created container sigsci-agent
+2026-11-12T21:50:24Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-r65s6     Created container controller
+2026-11-12T21:50:24Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-r65s6     Started container controller
+2026-11-12T21:50:25Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:50:26Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-7d6dfb4f4d-r65s6     NGINX reload triggered due to a change in configuration
+2026-11-12T21:50:26Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:50:54Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-7d6dfb4f4d-r65s6     Startup probe failed: HTTP probe failed with statuscode: 503
+2026-11-12T21:51:43Z   ngwaf                Normal    Killing                   poller                                        Stopping container poller
+2026-11-12T21:51:44Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-7d6dfb4f4d           Deleted pod: ingress-nginx-controller-7d6dfb4f4d-r65s6
+2026-11-12T21:51:44Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled down replica set ingress-nginx-controller-7d6dfb4f4d to 0 from 1
+2026-11-12T21:52:20Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-7vnpz     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:52:20Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-7d6dfb4f4d-7vnpz     Successfully assigned ingress-nginx/ingress-nginx-controller-7d6dfb4f4d-7vnpz to ngwaf-control-plane
+2026-11-12T21:52:20Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-7d6dfb4f4d           Created pod: ingress-nginx-controller-7d6dfb4f4d-7vnpz
+2026-11-12T21:52:20Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-7vnpz     Created container wait-egress-blocked
+2026-11-12T21:52:20Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-7vnpz     Started container wait-egress-blocked
+2026-11-12T21:52:21Z   ngwaf                Normal    Scheduled                 poller                                        Successfully assigned ngwaf/poller to ngwaf-control-plane
+2026-11-12T21:52:21Z   ngwaf                Normal    Pulled                    poller                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:52:21Z   ngwaf                Normal    Created                   poller                                        Created container poller
+2026-11-12T21:52:21Z   ngwaf                Normal    Started                   poller                                        Started container poller
+2026-11-12T21:52:35Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-7vnpz     Started container sigsci-agent
+2026-11-12T21:52:35Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-7vnpz     Created container controller
+2026-11-12T21:52:35Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-7vnpz     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:52:35Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:52:35Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-7vnpz     Started container controller
+2026-11-12T21:52:35Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-7vnpz     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:52:35Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-7vnpz     Created container sigsci-agent
+2026-11-12T21:52:36Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-7d6dfb4f4d-7vnpz     NGINX reload triggered due to a change in configuration
+2026-11-12T21:53:06Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-7d6dfb4f4d-7vnpz     Startup probe failed: HTTP probe failed with statuscode: 503
+2026-11-12T21:53:15Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:53:54Z   ngwaf                Normal    Killing                   poller                                        Stopping container poller
+2026-11-12T21:53:54Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-7d6dfb4f4d           Deleted pod: ingress-nginx-controller-7d6dfb4f4d-7vnpz
+2026-11-12T21:54:30Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-7d6dfb4f4d           Created pod: ingress-nginx-controller-7d6dfb4f4d-7wq6w
+2026-11-12T21:54:30Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-7d6dfb4f4d-7wq6w     Successfully assigned ingress-nginx/ingress-nginx-controller-7d6dfb4f4d-7wq6w to ngwaf-control-plane
+2026-11-12T21:54:31Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-7wq6w     Created container wait-egress-blocked
+2026-11-12T21:54:31Z   ngwaf                Normal    Scheduled                 poller                                        Successfully assigned ngwaf/poller to ngwaf-control-plane
+2026-11-12T21:54:31Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-7wq6w     Started container wait-egress-blocked
+2026-11-12T21:54:31Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-7wq6w     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:54:32Z   ngwaf                Normal    Created                   poller                                        Created container poller
+2026-11-12T21:54:32Z   ngwaf                Normal    Pulled                    poller                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:54:32Z   ngwaf                Normal    Started                   poller                                        Started container poller
+2026-11-12T21:54:45Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-7wq6w     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:54:45Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-7wq6w     Started container sigsci-agent
+2026-11-12T21:54:45Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-7wq6w     Created container sigsci-agent
+2026-11-12T21:54:45Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-7d6dfb4f4d-7wq6w     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:54:45Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-7d6dfb4f4d-7wq6w     Started container controller
+2026-11-12T21:54:45Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:54:45Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-7d6dfb4f4d-7wq6w     Created container controller
+2026-11-12T21:54:47Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-7d6dfb4f4d-7wq6w     NGINX reload triggered due to a change in configuration
+2026-11-12T21:55:16Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-7d6dfb4f4d-7wq6w     Startup probe failed: HTTP probe failed with statuscode: 503
+2026-11-12T21:55:21Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:56:04Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-bf9fc6b8c            Deleted pod: ingress-nginx-controller-bf9fc6b8c-v2bpx
+2026-11-12T21:56:04Z   ngwaf                Normal    Killing                   poller                                        Stopping container poller
+2026-11-12T21:56:04Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-7d6dfb4f4d           Deleted pod: ingress-nginx-controller-7d6dfb4f4d-7wq6w
+2026-11-12T21:56:04Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-bf9fc6b8c            Created pod: ingress-nginx-controller-bf9fc6b8c-v2bpx
+2026-11-12T21:56:04Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-bf9fc6b8c-v2bpx      Successfully assigned ingress-nginx/ingress-nginx-controller-bf9fc6b8c-v2bpx to ngwaf-control-plane
+2026-11-12T21:56:04Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      (combined from similar events): Scaled up replica set ingress-nginx-controller-bf9fc6b8c to 1
+2026-11-12T21:56:41Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-bf9fc6b8c-hzhmr      Started container wait-egress-blocked
+2026-11-12T21:56:41Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-bf9fc6b8c-hzhmr      Created container wait-egress-blocked
+2026-11-12T21:56:41Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-bf9fc6b8c-hzhmr      Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:56:41Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-bf9fc6b8c-hzhmr      Successfully assigned ingress-nginx/ingress-nginx-controller-bf9fc6b8c-hzhmr to ngwaf-control-plane
+2026-11-12T21:56:41Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-bf9fc6b8c            Created pod: ingress-nginx-controller-bf9fc6b8c-hzhmr
+2026-11-12T21:56:42Z   ngwaf                Normal    Scheduled                 poller                                        Successfully assigned ngwaf/poller to ngwaf-control-plane
+2026-11-12T21:56:42Z   ngwaf                Normal    Pulled                    poller                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:56:42Z   ngwaf                Normal    Created                   poller                                        Created container poller
+2026-11-12T21:56:42Z   ngwaf                Normal    Started                   poller                                        Started container poller
+2026-11-12T21:56:55Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-bf9fc6b8c-hzhmr      Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T21:56:56Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-bf9fc6b8c-hzhmr      Started container sigsci-agent
+2026-11-12T21:56:56Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-bf9fc6b8c-hzhmr      Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T21:56:56Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-bf9fc6b8c-hzhmr      Created container sigsci-agent
+2026-11-12T21:56:56Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-bf9fc6b8c-hzhmr      Created container controller
+2026-11-12T21:56:56Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T21:56:56Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-bf9fc6b8c-hzhmr      Started container controller
+2026-11-12T21:56:57Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T21:56:57Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-bf9fc6b8c-hzhmr      NGINX reload triggered due to a change in configuration
+2026-11-12T21:59:14Z   ngwaf                Normal    Killing                   poller                                        Stopping container poller
+2026-11-12T21:59:15Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-bf9fc6b8c            Deleted pod: ingress-nginx-controller-bf9fc6b8c-hzhmr
+2026-11-12T21:59:15Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-bf9fc6b8c-hzhmr      Stopping container controller
+2026-11-12T21:59:15Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-bf9fc6b8c-hzhmr      Stopping container sigsci-agent
+2026-11-12T21:59:21Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-bf9fc6b8c-hzhmr      Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T21:59:31Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-bf9fc6b8c-hzhmr      Readiness probe failed: Get "http://10.244.0.31:10254/healthz": dial tcp 10.244.0.31:10254: connect: connection refused
+2026-11-12T21:59:51Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-bf9fc6b8c-xzv5k      Created container wait-egress-blocked
+2026-11-12T21:59:51Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-bf9fc6b8c-xzv5k      Started container wait-egress-blocked
+2026-11-12T21:59:51Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-bf9fc6b8c-xzv5k      Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:59:51Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-bf9fc6b8c-xzv5k      Successfully assigned ingress-nginx/ingress-nginx-controller-bf9fc6b8c-xzv5k to ngwaf-control-plane
+2026-11-12T21:59:51Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-bf9fc6b8c            Created pod: ingress-nginx-controller-bf9fc6b8c-xzv5k
+2026-11-12T21:59:52Z   ngwaf                Normal    Started                   poller                                        Started container poller
+2026-11-12T21:59:52Z   ngwaf                Normal    Created                   poller                                        Created container poller
+2026-11-12T21:59:52Z   ngwaf                Normal    Pulled                    poller                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T21:59:52Z   ngwaf                Normal    Scheduled                 poller                                        Successfully assigned ngwaf/poller to ngwaf-control-plane
+2026-11-12T22:00:06Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-bf9fc6b8c-xzv5k      Started container sigsci-agent
+2026-11-12T22:00:06Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-bf9fc6b8c-xzv5k      Created container sigsci-agent
+2026-11-12T22:00:06Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T22:00:06Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-bf9fc6b8c-xzv5k      Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T22:00:06Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-bf9fc6b8c-xzv5k      Started container controller
+2026-11-12T22:00:06Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-bf9fc6b8c-xzv5k      Created container controller
+2026-11-12T22:00:06Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-bf9fc6b8c-xzv5k      Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T22:00:07Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-bf9fc6b8c-xzv5k      NGINX reload triggered due to a change in configuration
+2026-11-12T22:00:41Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T22:02:25Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-bf9fc6b8c            Deleted pod: ingress-nginx-controller-bf9fc6b8c-xzv5k
+2026-11-12T22:02:25Z   ngwaf                Normal    Killing                   poller                                        Stopping container poller
+2026-11-12T22:02:25Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled down replica set ingress-nginx-controller-bf9fc6b8c to 0 from 1
+2026-11-12T22:02:25Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-bf9fc6b8c-xzv5k      Stopping container sigsci-agent
+2026-11-12T22:02:25Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-bf9fc6b8c-xzv5k      Stopping container controller
+2026-11-12T22:02:31Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-bf9fc6b8c-xzv5k      Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T22:02:41Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-bf9fc6b8c-xzv5k      Readiness probe failed: Get "http://10.244.0.33:10254/healthz": dial tcp 10.244.0.33:10254: connect: connection refused
+2026-11-12T22:03:01Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-bf9fc6b8c-28f9l      Successfully assigned ingress-nginx/ingress-nginx-controller-bf9fc6b8c-28f9l to ngwaf-control-plane
+2026-11-12T22:03:01Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-bf9fc6b8c            Created pod: ingress-nginx-controller-bf9fc6b8c-28f9l
+2026-11-12T22:03:02Z   ngwaf                Normal    Scheduled                 poller                                        Successfully assigned ngwaf/poller to ngwaf-control-plane
+2026-11-12T22:03:02Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-bf9fc6b8c-28f9l      Started container wait-egress-blocked
+2026-11-12T22:03:02Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-bf9fc6b8c-28f9l      Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T22:03:02Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-bf9fc6b8c-28f9l      Created container wait-egress-blocked
+2026-11-12T22:03:03Z   ngwaf                Normal    Created                   poller                                        Created container poller
+2026-11-12T22:03:03Z   ngwaf                Normal    Pulled                    poller                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T22:03:03Z   ngwaf                Normal    Started                   poller                                        Started container poller
+2026-11-12T22:03:16Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-bf9fc6b8c-28f9l      Created container sigsci-agent
+2026-11-12T22:03:16Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T22:03:16Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-bf9fc6b8c-28f9l      Started container sigsci-agent
+2026-11-12T22:03:16Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-bf9fc6b8c-28f9l      Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T22:03:16Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-bf9fc6b8c-28f9l      Created container controller
+2026-11-12T22:03:16Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-bf9fc6b8c-28f9l      Started container controller
+2026-11-12T22:03:16Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-bf9fc6b8c-28f9l      Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T22:03:18Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-bf9fc6b8c-28f9l      NGINX reload triggered due to a change in configuration
+2026-11-12T22:03:57Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T22:05:35Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-55fb7d45d9-wlnb4     Successfully assigned ingress-nginx/ingress-nginx-controller-55fb7d45d9-wlnb4 to ngwaf-control-plane
+2026-11-12T22:05:35Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-bf9fc6b8c-28f9l      Stopping container controller
+2026-11-12T22:05:35Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-bf9fc6b8c-28f9l      Stopping container sigsci-agent
+2026-11-12T22:05:35Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-bf9fc6b8c            Deleted pod: ingress-nginx-controller-bf9fc6b8c-28f9l
+2026-11-12T22:05:35Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled up replica set ingress-nginx-controller-55fb7d45d9 to 1 from 0
+2026-11-12T22:05:35Z   ngwaf                Normal    Killing                   poller                                        Stopping container poller
+2026-11-12T22:05:35Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-55fb7d45d9           Deleted pod: ingress-nginx-controller-55fb7d45d9-wlnb4
+2026-11-12T22:05:35Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-55fb7d45d9           Created pod: ingress-nginx-controller-55fb7d45d9-wlnb4
+2026-11-12T22:05:42Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-bf9fc6b8c-28f9l      Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T22:05:52Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-bf9fc6b8c-28f9l      Readiness probe failed: Get "http://10.244.0.35:10254/healthz": dial tcp 10.244.0.35:10254: connect: connection refused
+2026-11-12T22:06:12Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-dpmdf     Started container wait-egress-blocked
+2026-11-12T22:06:12Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-dpmdf     Created container wait-egress-blocked
+2026-11-12T22:06:12Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-dpmdf     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T22:06:12Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-55fb7d45d9-dpmdf     Successfully assigned ingress-nginx/ingress-nginx-controller-55fb7d45d9-dpmdf to ngwaf-control-plane
+2026-11-12T22:06:12Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-55fb7d45d9           Created pod: ingress-nginx-controller-55fb7d45d9-dpmdf
+2026-11-12T22:06:27Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-dpmdf     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T22:06:27Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T22:06:27Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-dpmdf     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T22:06:27Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-dpmdf     Created container controller
+2026-11-12T22:06:27Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-dpmdf     Started container controller
+2026-11-12T22:06:27Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-dpmdf     Started container sigsci-agent
+2026-11-12T22:06:27Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-dpmdf     Created container sigsci-agent
+2026-11-12T22:06:28Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T22:06:28Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-55fb7d45d9-dpmdf     NGINX reload triggered due to a change in configuration
+2026-11-12T22:08:27Z   ngwaf                Normal    Created                   echo-5b899bd975-4sbc9                         Created container echo
+2026-11-12T22:08:27Z   ngwaf                Normal    Pulled                    echo-5b899bd975-4sbc9                         Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T22:08:27Z   ngwaf                Normal    ScalingReplicaSet         echo                                          Scaled up replica set echo-5b899bd975 to 1
+2026-11-12T22:08:27Z   ngwaf                Normal    SuccessfulCreate          echo-5b899bd975                               Created pod: echo-5b899bd975-4sbc9
+2026-11-12T22:08:27Z   ngwaf                Normal    Scheduled                 echo-5b899bd975-4sbc9                         Successfully assigned ngwaf/echo-5b899bd975-4sbc9 to ngwaf-control-plane
+2026-11-12T22:08:27Z   ngwaf                Normal    Started                   echo-5b899bd975-4sbc9                         Started container echo
+2026-11-12T22:08:28Z   ngwaf                Normal    Killing                   echo-6c7fc6b888-drl6k                         Stopping container echo
+2026-11-12T22:08:28Z   ngwaf                Normal    SuccessfulDelete          echo-6c7fc6b888                               Deleted pod: echo-6c7fc6b888-drl6k
+2026-11-12T22:08:28Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-dpmdf     Stopping container controller
+2026-11-12T22:08:28Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-dpmdf     Stopping container sigsci-agent
+2026-11-12T22:08:28Z   ngwaf                Normal    ScalingReplicaSet         echo                                          Scaled down replica set echo-6c7fc6b888 to 0 from 1
+2026-11-12T22:08:28Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-55fb7d45d9           Deleted pod: ingress-nginx-controller-55fb7d45d9-dpmdf
+2026-11-12T22:08:28Z   ingress-nginx        Normal    UPDATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T22:08:32Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-55fb7d45d9-dpmdf     Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T22:08:42Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-55fb7d45d9-dpmdf     Readiness probe failed: Get "http://10.244.0.37:10254/healthz": dial tcp 10.244.0.37:10254: connect: connection refused
+2026-11-12T22:08:50Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-r9r2q     Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T22:08:50Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-r9r2q     Started container wait-egress-blocked
+2026-11-12T22:08:50Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-r9r2q     Created container wait-egress-blocked
+2026-11-12T22:08:50Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-55fb7d45d9-r9r2q     Successfully assigned ingress-nginx/ingress-nginx-controller-55fb7d45d9-r9r2q to ngwaf-control-plane
+2026-11-12T22:08:50Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-55fb7d45d9           Created pod: ingress-nginx-controller-55fb7d45d9-r9r2q
+2026-11-12T22:08:51Z   ngwaf                Normal    Created                   poller                                        Created container poller
+2026-11-12T22:08:51Z   ngwaf                Normal    Pulled                    poller                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T22:08:51Z   ngwaf                Normal    Scheduled                 poller                                        Successfully assigned ngwaf/poller to ngwaf-control-plane
+2026-11-12T22:08:52Z   ngwaf                Normal    Started                   poller                                        Started container poller
+2026-11-12T22:09:05Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-r9r2q     Started container controller
+2026-11-12T22:09:05Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T22:09:05Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-r9r2q     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T22:09:05Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-r9r2q     Created container controller
+2026-11-12T22:09:05Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-55fb7d45d9-r9r2q     Started container sigsci-agent
+2026-11-12T22:09:05Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-55fb7d45d9-r9r2q     Created container sigsci-agent
+2026-11-12T22:09:05Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-55fb7d45d9-r9r2q     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T22:09:06Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-55fb7d45d9-r9r2q     NGINX reload triggered due to a change in configuration
+2026-11-12T22:09:41Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T22:11:24Z   ngwaf                Normal    Killing                   poller                                        Stopping container poller
+2026-11-12T22:11:26Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-r9r2q     Stopping container sigsci-agent
+2026-11-12T22:11:26Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-586df55c85           Deleted pod: ingress-nginx-controller-586df55c85-fr78w
+2026-11-12T22:11:26Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-586df55c85-fr78w     Successfully assigned ingress-nginx/ingress-nginx-controller-586df55c85-fr78w to ngwaf-control-plane
+2026-11-12T22:11:26Z   ingress-nginx        Normal    ScalingReplicaSet         ingress-nginx-controller                      Scaled up replica set ingress-nginx-controller-586df55c85 to 1 from 0
+2026-11-12T22:11:26Z   ingress-nginx        Normal    SuccessfulDelete          ingress-nginx-controller-55fb7d45d9           Deleted pod: ingress-nginx-controller-55fb7d45d9-r9r2q
+2026-11-12T22:11:26Z   ingress-nginx        Normal    Killing                   ingress-nginx-controller-55fb7d45d9-r9r2q     Stopping container controller
+2026-11-12T22:11:26Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-586df55c85           Created pod: ingress-nginx-controller-586df55c85-fr78w
+2026-11-12T22:11:30Z   ingress-nginx        Warning   Unhealthy                 ingress-nginx-controller-55fb7d45d9-r9r2q     Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-11-12T22:12:00Z   ingress-nginx        Normal    SuccessfulCreate          ingress-nginx-controller-586df55c85           Created pod: ingress-nginx-controller-586df55c85-tgtmg
+2026-11-12T22:12:00Z   ingress-nginx        Normal    Scheduled                 ingress-nginx-controller-586df55c85-tgtmg     Successfully assigned ingress-nginx/ingress-nginx-controller-586df55c85-tgtmg to ngwaf-control-plane
+2026-11-12T22:12:01Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-586df55c85-tgtmg     Started container sigsci-agent
+2026-11-12T22:12:01Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-586df55c85-tgtmg     Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T22:12:01Z   ingress-nginx        Normal    CREATE                    ingress-nginx-controller                      ConfigMap ingress-nginx/ingress-nginx-controller
+2026-11-12T22:12:01Z   ingress-nginx        Normal    Pulled                    ingress-nginx-controller-586df55c85-tgtmg     Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T22:12:01Z   ingress-nginx        Normal    Started                   ingress-nginx-controller-586df55c85-tgtmg     Started container controller
+2026-11-12T22:12:01Z   ngwaf                Normal    Scheduled                 poller                                        Successfully assigned ngwaf/poller to ngwaf-control-plane
+2026-11-12T22:12:01Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-586df55c85-tgtmg     Created container controller
+2026-11-12T22:12:01Z   ingress-nginx        Normal    Created                   ingress-nginx-controller-586df55c85-tgtmg     Created container sigsci-agent
+2026-11-12T22:12:02Z   ngwaf                Normal    Created                   poller                                        Created container poller
+2026-11-12T22:12:02Z   ngwaf                Normal    Sync                      echo                                          Scheduled for sync
+2026-11-12T22:12:02Z   ngwaf                Normal    Started                   poller                                        Started container poller
+2026-11-12T22:12:02Z   ngwaf                Normal    Pulled                    poller                                        Container image "localhost/py:3.12-alpine" already present on machine
+2026-11-12T22:12:02Z   ingress-nginx        Normal    RELOAD                    ingress-nginx-controller-586df55c85-tgtmg     NGINX reload triggered due to a change in configuration
+2026-11-12T22:14:34Z   ngwaf                Normal    Killing                   poller                                        Stopping container poller

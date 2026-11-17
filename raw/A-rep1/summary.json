@@ -1,0 +1,46 @@
+{
+ "run": "A-rep1",
+ "T0": 1794519860.078,
+ "agent_start": 15.1,
+ "first_config_attempt_failed": 75.16,
+ "rpc_socket_created": 75.16,
+ "endpoints_ready": 30.4,
+ "probe_first_503": null,
+ "probe_first_200": null,
+ "n_requests": 1969,
+ "n_reached_upstream": 1299,
+ "n_attack_payloads_reached_upstream": 1039,
+ "n_attack_reached_upstream_while_socket_absent": 748,
+ "n_attack_reached_upstream_while_socket_present_no_rules": 291,
+ "module_timeout_messages": 0,
+ "counts": [
+  {
+   "phase": "1_pod_not_serving",
+   "module": "",
+   "upstream": "no-upstream",
+   "client_status": "ERR",
+   "n": 668
+  },
+  {
+   "phase": "2_nginx_up_socket_absent",
+   "module": "no-socket",
+   "upstream": "upstream",
+   "client_status": "200",
+   "n": 935
+  },
+  {
+   "phase": "3_socket_present_no_rules",
+   "module": "agent-answered",
+   "upstream": "no-upstream",
+   "client_status": "200",
+   "n": 2
+  },
+  {
+   "phase": "3_socket_present_no_rules",
+   "module": "agent-answered",
+   "upstream": "upstream",
+   "client_status": "200",
+   "n": 364
+  }
+ ]
+}

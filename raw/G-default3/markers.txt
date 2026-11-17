@@ -1,0 +1,5 @@
+1794525725.412 T0_scale_up (netpol egress block ACTIVE)
+1794525726.458 pod_ip_assigned 10.244.0.91
+1794525726.551 poller_started
+1794525876.559 collect
+1794525879.250 done

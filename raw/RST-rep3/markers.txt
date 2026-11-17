@@ -1,0 +1,6 @@
+1794528029.363 T0_scale_up (egress ALLOWED, no netpol)
+1794528030.408 pod_ip_assigned 10.244.0.122
+1794528030.797 rst_rule_inserted rc=0 -P OUTPUT ACCEPT | -A OUTPUT ! -d 10.0.0.0/8 -p tcp -m tcp --dport 443 -j REJECT --reject-with tcp-reset | 
+1794528030.853 poller_started
+1794528150.855 collect
+1794528153.513 done

@@ -1,0 +1,5 @@
+1794525915.922 ingress-nginx-controller-586df55c85-gwdql   <none>   Pending   <none>
+1794525915.924 ingress-nginx-controller-586df55c85-gwdql   <none>   Pending   <none>
+1794525915.929 ingress-nginx-controller-586df55c85-gwdql   False    Pending   false,false
+1794525916.857 ingress-nginx-controller-586df55c85-gwdql   False    Running   false,true
+1794525926.247 ingress-nginx-controller-586df55c85-gwdql   True     Running   true,true

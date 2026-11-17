@@ -1,0 +1,6 @@
+1794526527.347 T0_scale_up (egress ALLOWED, no netpol)
+1794526528.384 pod_ip_assigned 10.244.0.101
+1794526528.542 poller_started
+1794526607.707 gen_SIGSTOP rc=0
+1794526728.554 collect
+1794526731.964 done

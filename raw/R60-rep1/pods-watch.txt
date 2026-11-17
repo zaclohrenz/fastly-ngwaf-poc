@@ -1,0 +1,7 @@
+1794524853.327 ingress-nginx-controller-77f7b6d94-kc98q   <none>   Pending   <none>
+1794524853.329 ingress-nginx-controller-77f7b6d94-kc98q   <none>   Pending   <none>
+1794524853.340 ingress-nginx-controller-77f7b6d94-kc98q   False    Pending   false,false
+1794524854.247 ingress-nginx-controller-77f7b6d94-kc98q   False    Pending   false,false
+1794524868.289 ingress-nginx-controller-77f7b6d94-kc98q   False    Pending   false,false
+1794524869.290 ingress-nginx-controller-77f7b6d94-kc98q   False    Running   false,true
+1794524933.647 ingress-nginx-controller-77f7b6d94-kc98q   True     Running   true,true

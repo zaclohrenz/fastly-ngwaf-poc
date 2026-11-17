@@ -1,0 +1,23 @@
+# 1 req/s probe used only for the idle-freeze test (generator paused): measures per-request latency while the agent is SIGSTOPped.
+apiVersion: v1
+kind: Pod
+metadata: {name: slowprobe, namespace: ngwaf}
+spec:
+  restartPolicy: Never
+  containers:
+  - name: p
+    image: localhost/py:3.12-alpine
+    imagePullPolicy: Never
+    command: [python, -u, -c]
+    args:
+    - |
+      import http.client, time, uuid
+      nxt = time.time()
+      while True:
+          rid = "probe-" + uuid.uuid4().hex[:10]; t0 = time.time(); st = "ERR"
+          try:
+              c = http.client.HTTPConnection("ingress-nginx-controller.ingress-nginx.svc.cluster.local", 80, timeout=3)
+              c.request("GET", "/?probe=1", headers={"Host": "echo.local", "X-Request-ID": rid}); r = c.getresponse(); r.read(); st = r.status; c.close()
+          except Exception as e: st = type(e).__name__
+          print(f"{t0:.6f},{rid},{st},{(time.time()-t0)*1000:.1f}", flush=True)
+          nxt += 1.0; time.sleep(max(0, nxt - time.time()))

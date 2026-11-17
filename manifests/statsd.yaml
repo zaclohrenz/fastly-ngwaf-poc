@@ -1,0 +1,24 @@
+# Minimal UDP statsd sink: logs every datagram with an epoch timestamp.
+apiVersion: v1
+kind: Pod
+metadata: {name: statsd, namespace: ngwaf, labels: {app: statsd}}
+spec:
+  containers:
+  - name: statsd
+    image: localhost/py:3.12-alpine
+    imagePullPolicy: Never
+    command: [python, -u, -c]
+    args:
+    - |
+      import socket, time
+      s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM); s.bind(("0.0.0.0", 8125))
+      while True:
+          d, a = s.recvfrom(65535)
+          for l in d.decode(errors="replace").splitlines(): print(f"{time.time():.3f} {l}", flush=True)
+---
+apiVersion: v1
+kind: Service
+metadata: {name: statsd, namespace: ngwaf}
+spec:
+  selector: {app: statsd}
+  ports: [{port: 8125, protocol: UDP}]

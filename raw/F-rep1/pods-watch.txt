@@ -1,0 +1,7 @@
+1794520601.027 ingress-nginx-controller-bf9fc6b8c-hzhmr   <none>   Pending   <none>
+1794520601.030 ingress-nginx-controller-bf9fc6b8c-hzhmr   <none>   Pending   <none>
+1794520601.039 ingress-nginx-controller-bf9fc6b8c-hzhmr   False    Pending   false,false
+1794520601.981 ingress-nginx-controller-bf9fc6b8c-hzhmr   False    Pending   false,false
+1794520616.011 ingress-nginx-controller-bf9fc6b8c-hzhmr   False    Pending   false,false
+1794520617.015 ingress-nginx-controller-bf9fc6b8c-hzhmr   False    Running   false,true
+1794520631.653 ingress-nginx-controller-bf9fc6b8c-hzhmr   True     Running   true,true

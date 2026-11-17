@@ -1,0 +1,5 @@
+1794526106.369 ingress-nginx-controller-5777644b7f-jqj4f   <none>   Pending   <none>
+1794526106.372 ingress-nginx-controller-5777644b7f-jqj4f   <none>   Pending   <none>
+1794526106.384 ingress-nginx-controller-5777644b7f-jqj4f   False    Pending   false,false
+1794526107.300 ingress-nginx-controller-5777644b7f-jqj4f   False    Running   false,true
+1794526116.693 ingress-nginx-controller-5777644b7f-jqj4f   True     Running   true,true

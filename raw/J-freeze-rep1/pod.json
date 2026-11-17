@@ -1,0 +1,381 @@
+{
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+        "creationTimestamp": "2026-11-12T23:47:29Z",
+        "generateName": "ingress-nginx-controller-5777644b7f-",
+        "labels": {
+            "app.kubernetes.io/component": "controller",
+            "app.kubernetes.io/instance": "ingress-nginx",
+            "app.kubernetes.io/managed-by": "Helm",
+            "app.kubernetes.io/name": "ingress-nginx",
+            "app.kubernetes.io/part-of": "ingress-nginx",
+            "app.kubernetes.io/version": "1.15.1",
+            "helm.sh/chart": "ingress-nginx-4.15.1",
+            "pod-template-hash": "5777644b7f"
+        },
+        "name": "ingress-nginx-controller-5777644b7f-bsvwx",
+        "namespace": "ingress-nginx",
+        "ownerReferences": [
+            {
+                "apiVersion": "apps/v1",
+                "blockOwnerDeletion": true,
+                "controller": true,
+                "kind": "ReplicaSet",
+                "name": "ingress-nginx-controller-5777644b7f",
+                "uid": "2b2b24f0-215b-431c-a540-a4d03093af40"
+            }
+        ],
+        "resourceVersion": "17019",
+        "uid": "effa87f0-5d8a-4663-89b6-c06ea50e0d5d"
+    },
+    "spec": {
+        "automountServiceAccountToken": true,
+        "containers": [
+            {
+                "args": [
+                    "/nginx-ingress-controller",
+                    "--publish-service=$(POD_NAMESPACE)/ingress-nginx-controller",
+                    "--election-id=ingress-nginx-leader",
+                    "--controller-class=k8s.io/ingress-nginx",
+                    "--ingress-class=nginx",
+                    "--configmap=$(POD_NAMESPACE)/ingress-nginx-controller"
+                ],
+                "env": [
+                    {
+                        "name": "POD_NAME",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "metadata.name"
+                            }
+                        }
+                    },
+                    {
+                        "name": "POD_NAMESPACE",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "metadata.namespace"
+                            }
+                        }
+                    },
+                    {
+                        "name": "LD_PRELOAD",
+                        "value": "/usr/local/lib/libmimalloc.so"
+                    }
+                ],
+                "image": "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0",
+                "imagePullPolicy": "Never",
+                "lifecycle": {
+                    "preStop": {
+                        "exec": {
+                            "command": [
+                                "/wait-shutdown"
+                            ]
+                        }
+                    }
+                },
+                "livenessProbe": {
+                    "failureThreshold": 5,
+                    "httpGet": {
+                        "path": "/healthz",
+                        "port": 10254,
+                        "scheme": "HTTP"
+                    },
+                    "initialDelaySeconds": 10,
+                    "periodSeconds": 10,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 1
+                },
+                "name": "controller",
+                "ports": [
+                    {
+                        "containerPort": 80,
+                        "name": "http",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 443,
+                        "name": "https",
+                        "protocol": "TCP"
+                    }
+                ],
+                "readinessProbe": {
+                    "failureThreshold": 3,
+                    "httpGet": {
+                        "path": "/healthz",
+                        "port": 10254,
+                        "scheme": "HTTP"
+                    },
+                    "initialDelaySeconds": 10,
+                    "periodSeconds": 10,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 1
+                },
+                "resources": {
+                    "requests": {
+                        "cpu": "100m",
+                        "memory": "90Mi"
+                    }
+                },
+                "securityContext": {
+                    "allowPrivilegeEscalation": false,
+                    "capabilities": {
+                        "add": [
+                            "NET_BIND_SERVICE"
+                        ],
+                        "drop": [
+                            "ALL"
+                        ]
+                    },
+                    "readOnlyRootFilesystem": false,
+                    "runAsGroup": 82,
+                    "runAsNonRoot": true,
+                    "runAsUser": 101,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/sigsci/tmp",
+                        "name": "sigsci-temp"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-lll8b",
+                        "readOnly": true
+                    }
+                ]
+            },
+            {
+                "env": [
+                    {
+                        "name": "SIGSCI_RPC_ADDRESS",
+                        "value": "unix:/sigsci/tmp/sigsci.sock"
+                    },
+                    {
+                        "name": "SIGSCI_ACCESSKEYID",
+                        "value": "00000000-0000-0000-0000-000000000000"
+                    },
+                    {
+                        "name": "SIGSCI_SECRETACCESSKEY",
+                        "value": "<dummy-secret>"
+                    },
+                    {
+                        "name": "SIGSCI_STATSD_ADDRESS",
+                        "value": "statsd.ngwaf.svc.cluster.local:8125"
+                    },
+                    {
+                        "name": "SIGSCI_DEBUG_LOG_RPC_DATA",
+                        "value": "/sigsci/tmp/rpc.hex"
+                    },
+                    {
+                        "name": "SIGSCI_DEBUG_LOG_UPLOADS",
+                        "value": "1"
+                    }
+                ],
+                "image": "localhost/sigsci-agent:4.83.2",
+                "imagePullPolicy": "Never",
+                "name": "sigsci-agent",
+                "resources": {},
+                "securityContext": {
+                    "readOnlyRootFilesystem": true
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/sigsci/tmp",
+                        "name": "sigsci-temp"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-lll8b",
+                        "readOnly": true
+                    }
+                ]
+            }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "nodeName": "ngwaf-control-plane",
+        "nodeSelector": {
+            "kubernetes.io/os": "linux"
+        },
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 0,
+        "restartPolicy": "Always",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "ingress-nginx",
+        "serviceAccountName": "ingress-nginx",
+        "terminationGracePeriodSeconds": 300,
+        "tolerations": [
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/not-ready",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            },
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/unreachable",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            }
+        ],
+        "volumes": [
+            {
+                "emptyDir": {},
+                "name": "sigsci-temp"
+            },
+            {
+                "name": "kube-api-access-lll8b",
+                "projected": {
+                    "defaultMode": 420,
+                    "sources": [
+                        {
+                            "serviceAccountToken": {
+                                "expirationSeconds": 3607,
+                                "path": "token"
+                            }
+                        },
+                        {
+                            "configMap": {
+                                "items": [
+                                    {
+                                        "key": "ca.crt",
+                                        "path": "ca.crt"
+                                    }
+                                ],
+                                "name": "kube-root-ca.crt"
+                            }
+                        },
+                        {
+                            "downwardAPI": {
+                                "items": [
+                                    {
+                                        "fieldRef": {
+                                            "apiVersion": "v1",
+                                            "fieldPath": "metadata.namespace"
+                                        },
+                                        "path": "namespace"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-12T23:47:30Z",
+                "status": "True",
+                "type": "PodReadyToStartContainers"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-12T23:47:29Z",
+                "status": "True",
+                "type": "Initialized"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-12T23:47:39Z",
+                "status": "True",
+                "type": "Ready"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-12T23:47:39Z",
+                "status": "True",
+                "type": "ContainersReady"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-12T23:47:29Z",
+                "status": "True",
+                "type": "PodScheduled"
+            }
+        ],
+        "containerStatuses": [
+            {
+                "containerID": "containerd://e0318facaab30305652128a5a67199d15212a48063e230d33a4eef12b81cb61f",
+                "image": "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0",
+                "imageID": "docker.io/library/import-2026-11-12@sha256:7e030f68d2fac0cbd275c1acf084ec818939df86d9692d0bd2bfa41215b67b63",
+                "lastState": {},
+                "name": "controller",
+                "ready": true,
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2026-11-12T23:47:29Z"
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/sigsci/tmp",
+                        "name": "sigsci-temp"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-lll8b",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            },
+            {
+                "containerID": "containerd://76d031b8534f6dd6d1d06050d5a0f9e528ef2270a330d8dc5c5155ccfd6c665b",
+                "image": "localhost/sigsci-agent:4.83.2",
+                "imageID": "docker.io/library/import-2026-11-12@sha256:b20a74b9a432b29e3505782ed7e6fe3941f7d95e14c32cf69eefb35953f13548",
+                "lastState": {},
+                "name": "sigsci-agent",
+                "ready": true,
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2026-11-12T23:47:29Z"
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/sigsci/tmp",
+                        "name": "sigsci-temp"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-lll8b",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            }
+        ],
+        "hostIP": "10.89.0.2",
+        "hostIPs": [
+            {
+                "ip": "10.89.0.2"
+            }
+        ],
+        "phase": "Running",
+        "podIP": "10.244.0.110",
+        "podIPs": [
+            {
+                "ip": "10.244.0.110"
+            }
+        ],
+        "qosClass": "Burstable",
+        "startTime": "2026-11-12T23:47:29Z"
+    }
+}

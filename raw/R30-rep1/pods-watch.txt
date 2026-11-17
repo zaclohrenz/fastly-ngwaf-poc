@@ -1,0 +1,7 @@
+1794524722.978 ingress-nginx-controller-75598b4cf9-ck4x6   <none>   Pending   <none>
+1794524722.981 ingress-nginx-controller-75598b4cf9-ck4x6   <none>   Pending   <none>
+1794524722.987 ingress-nginx-controller-75598b4cf9-ck4x6   False    Pending   false,false
+1794524723.914 ingress-nginx-controller-75598b4cf9-ck4x6   False    Pending   false,false
+1794524737.958 ingress-nginx-controller-75598b4cf9-ck4x6   False    Pending   false,false
+1794524738.961 ingress-nginx-controller-75598b4cf9-ck4x6   False    Running   false,true
+1794524773.294 ingress-nginx-controller-75598b4cf9-ck4x6   True     Running   true,true

@@ -1,0 +1,5 @@
+1794521520.882 ingress-nginx-controller-586df55c85-tgtmg   <none>   Pending   <none>
+1794521520.884 ingress-nginx-controller-586df55c85-tgtmg   <none>   Pending   <none>
+1794521520.891 ingress-nginx-controller-586df55c85-tgtmg   False    Pending   false,false
+1794521521.832 ingress-nginx-controller-586df55c85-tgtmg   False    Running   false,true
+1794521531.205 ingress-nginx-controller-586df55c85-tgtmg   True     Running   true,true

@@ -1,0 +1,24 @@
+# Startup-probe poller: GET http://<pod-ip>:2024/startup every 250ms, logs "epoch status".
+apiVersion: v1
+kind: Pod
+metadata: {name: poller, namespace: ngwaf}
+spec:
+  restartPolicy: Never
+  containers:
+  - name: poller
+    image: localhost/py:3.12-alpine
+    imagePullPolicy: Never
+    env: [{name: TARGET, value: "__IP__"}]
+    command: [python, -u, -c]
+    args:
+    - |
+      import http.client, time, os
+      T = os.environ["TARGET"]; nxt = time.time()
+      while True:
+          t = time.time()
+          try:
+              c = http.client.HTTPConnection(T, 2024, timeout=0.2); c.request("GET", "/startup"); s = c.getresponse().status; c.close()
+          except Exception as e:
+              s = type(e).__name__
+          print(f"{t:.3f} {s}", flush=True)
+          nxt += 0.25; time.sleep(max(0, nxt - time.time()))

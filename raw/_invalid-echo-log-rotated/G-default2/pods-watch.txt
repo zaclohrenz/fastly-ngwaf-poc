@@ -1,0 +1,11 @@
+1794525343.526 ingress-nginx-controller-6fdd54585f-4zqp6   False   Running   false,true
+1794525344.543 ingress-nginx-controller-55fb7d45d9-wct4k   <none>   Pending   <none>
+1794525344.545 ingress-nginx-controller-55fb7d45d9-wct4k   <none>   Pending   <none>
+1794525344.551 ingress-nginx-controller-55fb7d45d9-wct4k   False    Pending   false,false
+1794525345.483 ingress-nginx-controller-55fb7d45d9-wct4k   False    Pending   false,false
+1794525359.524 ingress-nginx-controller-55fb7d45d9-wct4k   False    Pending   false,false
+1794525360.527 ingress-nginx-controller-55fb7d45d9-wct4k   False    Running   false,true
+1794525374.868 ingress-nginx-controller-55fb7d45d9-wct4k   True     Running   true,true
+1794525388.041 ingress-nginx-controller-6fdd54585f-4zqp6   False    Failed    false,false
+1794525388.595 ingress-nginx-controller-6fdd54585f-4zqp6   False    Failed    false,false
+1794525388.597 ingress-nginx-controller-6fdd54585f-4zqp6   False    Failed    false,false

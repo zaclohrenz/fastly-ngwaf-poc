@@ -1,0 +1,100 @@
+# trimmed from full nginx debug log (382758 lines, 38 MiB): module-related lines of up to 3 SQLi-payload requests per phase
+## phase=no-socket
+2026-11-12T21:44:50.559856402Z 2026/11/12 21:44:50 [debug] 30#30: *243 http header: "X-Request-ID: 8a0886c66ef4-sqli"
+2026-11-12T21:44:50.559874402Z 2026/11/12 21:44:50 [debug] 30#30: *243 sigsci:sigsci_read_body m=skip body, GET method with CL <=0
+2026-11-12T21:44:50.559875819Z 2026/11/12 21:44:50 [debug] 30#30: *243 sigsci:request_body_valid m=request body nil
+2026-11-12T21:44:50.559877152Z 2026/11/12 21:44:50 [debug] 30#30: *243 sigsci_new_ctx: post-bodylen=0 : new context msg-len=4096
+2026-11-12T21:44:50.559881527Z 2026/11/12 21:44:50 [debug] 30#30: *243 sigsci_prerequest_message: msg size: 421 : buf len=4096
+2026-11-12T21:44:50.559884069Z 2026/11/12 21:44:50 [debug] 30#30: *243 sigsci:sigsci_transport_open host=unix:/sigsci/tmp/sigsci.sock port=-1
+2026-11-12T21:44:50.559961652Z 2026/11/12 21:44:50 [error] 30#30: *243 sigsci_transport_open: cannot connect uds socket unix:/sigsci/tmp/sigsci.sock : errno=2, client: 10.244.0.6, server: echo.local, request: "GET /?id=1%27%20OR%20%271%27%3D%271%27%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1", host: "echo.local"
+2026-11-12T21:44:50.559970485Z 2026/11/12 21:44:50 [error] 30#30: *243 sigsci:ss_send_prerequest: 0 ms: Failed to open connection to agent, client: 10.244.0.6, server: echo.local, request: "GET /?id=1%27%20OR%20%271%27%3D%271%27%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1", host: "echo.local"
+2026-11-12T21:44:50.559973652Z 2026/11/12 21:44:50 [debug] 30#30: *243 sigsci:ss_send_prerequest: prerequest complete: 0 ms: ret=-5 agent-resp-code=-2 msg-id= req-err-status=0
+2026-11-12T21:44:50.560556151Z 2026/11/12 21:44:50 [debug] 30#30: *243 sigsci:sigsci_handler m=skip already inspected
+2026-11-12T21:44:50.560584734Z 2026/11/12 21:44:50 [debug] 30#30: *243 http script copy: "X-Request-ID"
+2026-11-12T21:44:50.561571273Z 2026/11/12 21:44:50 [debug] 30#30: *243 sigsci_process_end_request: response-time: 2 ms: resp-status=200 : resp-bytes-sent=102 : hdr-resp-bytes=3 : uri=/ req-post-len=0
+2026-11-12T21:44:50.561581607Z 2026/11/12 21:44:50 [debug] 30#30: *243 sigsci_process_end_request: 2 ms: on_end_request complete: req-pos-len=0
+## phase=no-socket
+2026-11-12T21:44:50.821607728Z 2026/11/12 21:44:50 [debug] 31#31: *275 http header: "X-Request-ID: e210a45a5cf4-sqli"
+2026-11-12T21:44:50.821619769Z 2026/11/12 21:44:50 [debug] 31#31: *275 sigsci:sigsci_read_body m=skip body, GET method with CL <=0
+2026-11-12T21:44:50.821620978Z 2026/11/12 21:44:50 [debug] 31#31: *275 sigsci:request_body_valid m=request body nil
+2026-11-12T21:44:50.821622061Z 2026/11/12 21:44:50 [debug] 31#31: *275 sigsci_new_ctx: post-bodylen=0 : new context msg-len=4096
+2026-11-12T21:44:50.821624186Z 2026/11/12 21:44:50 [debug] 31#31: *275 sigsci_prerequest_message: msg size: 421 : buf len=4096
+2026-11-12T21:44:50.821626394Z 2026/11/12 21:44:50 [debug] 31#31: *275 sigsci:sigsci_transport_open host=unix:/sigsci/tmp/sigsci.sock port=-1
+2026-11-12T21:44:50.821630019Z 2026/11/12 21:44:50 [error] 31#31: *275 sigsci_transport_open: cannot connect uds socket unix:/sigsci/tmp/sigsci.sock : errno=2, client: 10.244.0.6, server: echo.local, request: "GET /?id=1%27%20OR%20%271%27%3D%271%27%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1", host: "echo.local"
+2026-11-12T21:44:50.821631686Z 2026/11/12 21:44:50 [error] 31#31: *275 sigsci:ss_send_prerequest: 0 ms: Failed to open connection to agent, client: 10.244.0.6, server: echo.local, request: "GET /?id=1%27%20OR%20%271%27%3D%271%27%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1", host: "echo.local"
+2026-11-12T21:44:50.821632853Z 2026/11/12 21:44:50 [debug] 31#31: *275 sigsci:ss_send_prerequest: prerequest complete: 0 ms: ret=-5 agent-resp-code=-2 msg-id= req-err-status=0
+2026-11-12T21:44:50.821786352Z 2026/11/12 21:44:50 [debug] 31#31: *275 sigsci:sigsci_handler m=skip already inspected
+2026-11-12T21:44:50.821863977Z 2026/11/12 21:44:50 [debug] 31#31: *275 http script copy: "X-Request-ID"
+2026-11-12T21:44:50.822675726Z 2026/11/12 21:44:50 [debug] 31#31: *275 sigsci_process_end_request: response-time: 1 ms: resp-status=200 : resp-bytes-sent=102 : hdr-resp-bytes=3 : uri=/ req-post-len=0
+2026-11-12T21:44:50.822677184Z 2026/11/12 21:44:50 [debug] 31#31: *275 sigsci_process_end_request: 1 ms: on_end_request complete: req-pos-len=0
+## phase=no-socket
+2026-11-12T21:44:50.871980622Z 2026/11/12 21:44:50 [debug] 33#33: *280 http header: "X-Request-ID: 0db4cf5c4fa8-sqli"
+2026-11-12T21:44:50.872013289Z 2026/11/12 21:44:50 [debug] 33#33: *280 sigsci:sigsci_read_body m=skip body, GET method with CL <=0
+2026-11-12T21:44:50.872015539Z 2026/11/12 21:44:50 [debug] 33#33: *280 sigsci:request_body_valid m=request body nil
+2026-11-12T21:44:50.872017789Z 2026/11/12 21:44:50 [debug] 33#33: *280 sigsci_new_ctx: post-bodylen=0 : new context msg-len=4096
+2026-11-12T21:44:50.872023289Z 2026/11/12 21:44:50 [debug] 33#33: *280 sigsci_prerequest_message: msg size: 421 : buf len=4096
+2026-11-12T21:44:50.872026497Z 2026/11/12 21:44:50 [debug] 33#33: *280 sigsci:sigsci_transport_open host=unix:/sigsci/tmp/sigsci.sock port=-1
+2026-11-12T21:44:50.872038789Z 2026/11/12 21:44:50 [error] 33#33: *280 sigsci_transport_open: cannot connect uds socket unix:/sigsci/tmp/sigsci.sock : errno=2, client: 10.244.0.6, server: echo.local, request: "GET /?id=1%27%20OR%20%271%27%3D%271%27%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1", host: "echo.local"
+2026-11-12T21:44:50.872050205Z 2026/11/12 21:44:50 [error] 33#33: *280 sigsci:ss_send_prerequest: 0 ms: Failed to open connection to agent, client: 10.244.0.6, server: echo.local, request: "GET /?id=1%27%20OR%20%271%27%3D%271%27%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1", host: "echo.local"
+2026-11-12T21:44:50.872054539Z 2026/11/12 21:44:50 [debug] 33#33: *280 sigsci:ss_send_prerequest: prerequest complete: 0 ms: ret=-5 agent-resp-code=-2 msg-id= req-err-status=0
+2026-11-12T21:44:50.872294246Z 2026/11/12 21:44:50 [debug] 33#33: *280 sigsci:sigsci_handler m=skip already inspected
+2026-11-12T21:44:50.872329996Z 2026/11/12 21:44:50 [debug] 33#33: *280 http script copy: "X-Request-ID"
+2026-11-12T21:44:50.873285911Z 2026/11/12 21:44:50 [debug] 33#33: *280 sigsci_process_end_request: response-time: 2 ms: resp-status=200 : resp-bytes-sent=102 : hdr-resp-bytes=3 : uri=/ req-post-len=0
+2026-11-12T21:44:50.873286994Z 2026/11/12 21:44:50 [debug] 33#33: *280 sigsci_process_end_request: 2 ms: on_end_request complete: req-pos-len=0
+## phase=agent-answered
+2026-11-12T21:45:35.308456627Z 2026/11/12 21:45:35 [debug] 31#31: *2771 http header: "X-Request-ID: 121d6b70e1c8-sqli"
+2026-11-12T21:45:35.308470503Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci:sigsci_read_body m=skip body, GET method with CL <=0
+2026-11-12T21:45:35.308471461Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci:request_body_valid m=request body nil
+2026-11-12T21:45:35.308473878Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci_new_ctx: post-bodylen=0 : new context msg-len=4096
+2026-11-12T21:45:35.308475753Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci_prerequest_message: msg size: 421 : buf len=4096
+2026-11-12T21:45:35.308477545Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci:sigsci_transport_open host=unix:/sigsci/tmp/sigsci.sock port=-1
+2026-11-12T21:45:35.308677060Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci_parse_response: Map length 3
+2026-11-12T21:45:35.308704853Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci_parse_response: Map key 0 is WAFResponse
+2026-11-12T21:45:35.308708020Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci_parse_response: Map key 1 is RequestID
+2026-11-12T21:45:35.308709479Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci_parse_response: Map key 2 is RequestHeaders
+2026-11-12T21:45:35.308711312Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci_parse_response: Parsed RequestHeaders[0] X-SigSci-Agent: disabled
+2026-11-12T21:45:35.308713021Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci:ss_send_prerequest: prerequest complete: 0 ms: ret=-5 agent-resp-code=200 msg-id= req-err-status=0
+2026-11-12T21:45:35.308806736Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci:sigsci_handler m=skip already inspected
+2026-11-12T21:45:35.308837488Z 2026/11/12 21:45:35 [debug] 31#31: *2771 http script copy: "X-Request-ID"
+2026-11-12T21:45:35.308868074Z 2026/11/12 21:45:35 [debug] 31#31: *2771 http proxy header: "X-SigSci-AgentResponse: 200"
+2026-11-12T21:45:35.308870032Z 2026/11/12 21:45:35 [debug] 31#31: *2771 http proxy header: "X-SigSci-Agent: disabled"
+2026-11-12T21:45:35.309777140Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci_process_end_request: response-time: 1 ms: resp-status=200 : resp-bytes-sent=102 : hdr-resp-bytes=3 : uri=/ req-post-len=0
+2026-11-12T21:45:35.309778223Z 2026/11/12 21:45:35 [debug] 31#31: *2771 sigsci_process_end_request: 1 ms: on_end_request complete: req-pos-len=0
+## phase=agent-answered
+2026-11-12T21:45:35.557723734Z 2026/11/12 21:45:35 [debug] 30#30: *2796 http header: "X-Request-ID: 0bfca0f77648-sqli"
+2026-11-12T21:45:35.557734068Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci:sigsci_read_body m=skip body, GET method with CL <=0
+2026-11-12T21:45:35.557734818Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci:request_body_valid m=request body nil
+2026-11-12T21:45:35.557735651Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci_new_ctx: post-bodylen=0 : new context msg-len=4096
+2026-11-12T21:45:35.557737151Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci_prerequest_message: msg size: 421 : buf len=4096
+2026-11-12T21:45:35.557738568Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci:sigsci_transport_open host=unix:/sigsci/tmp/sigsci.sock port=-1
+2026-11-12T21:45:35.558034298Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci_parse_response: Map length 3
+2026-11-12T21:45:35.558041298Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci_parse_response: Map key 0 is WAFResponse
+2026-11-12T21:45:35.558042632Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci_parse_response: Map key 1 is RequestID
+2026-11-12T21:45:35.558045382Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci_parse_response: Map key 2 is RequestHeaders
+2026-11-12T21:45:35.558046549Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci_parse_response: Parsed RequestHeaders[0] X-SigSci-Agent: disabled
+2026-11-12T21:45:35.558047799Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci:ss_send_prerequest: prerequest complete: 0 ms: ret=-5 agent-resp-code=200 msg-id= req-err-status=0
+2026-11-12T21:45:35.558104428Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci:sigsci_handler m=skip already inspected
+2026-11-12T21:45:35.558313610Z 2026/11/12 21:45:35 [debug] 30#30: *2796 http script copy: "X-Request-ID"
+2026-11-12T21:45:35.558353238Z 2026/11/12 21:45:35 [debug] 30#30: *2796 http proxy header: "X-SigSci-AgentResponse: 200"
+2026-11-12T21:45:35.558353988Z 2026/11/12 21:45:35 [debug] 30#30: *2796 http proxy header: "X-SigSci-Agent: disabled"
+2026-11-12T21:45:35.558973324Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci_process_end_request: response-time: 1 ms: resp-status=200 : resp-bytes-sent=102 : hdr-resp-bytes=3 : uri=/ req-post-len=0
+2026-11-12T21:45:35.558974533Z 2026/11/12 21:45:35 [debug] 30#30: *2796 sigsci_process_end_request: 1 ms: on_end_request complete: req-pos-len=0
+## phase=agent-answered
+2026-11-12T21:45:35.808408360Z 2026/11/12 21:45:35 [debug] 32#32: *2806 http header: "X-Request-ID: bb0d51f7e677-sqli"
+2026-11-12T21:45:35.808417027Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci:sigsci_read_body m=skip body, GET method with CL <=0
+2026-11-12T21:45:35.808418611Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci:request_body_valid m=request body nil
+2026-11-12T21:45:35.808421819Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci_new_ctx: post-bodylen=0 : new context msg-len=4096
+2026-11-12T21:45:35.808423236Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci_prerequest_message: msg size: 421 : buf len=4096
+2026-11-12T21:45:35.808424569Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci:sigsci_transport_open host=unix:/sigsci/tmp/sigsci.sock port=-1
+2026-11-12T21:45:35.808930398Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci_parse_response: Map length 3
+2026-11-12T21:45:35.808935732Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci_parse_response: Map key 0 is WAFResponse
+2026-11-12T21:45:35.808936690Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci_parse_response: Map key 1 is RequestID
+2026-11-12T21:45:35.808937523Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci_parse_response: Map key 2 is RequestHeaders
+2026-11-12T21:45:35.808938607Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci_parse_response: Parsed RequestHeaders[0] X-SigSci-Agent: disabled
+2026-11-12T21:45:35.808939482Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci:ss_send_prerequest: prerequest complete: 0 ms: ret=-5 agent-resp-code=200 msg-id= req-err-status=0
+2026-11-12T21:45:35.809001611Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci:sigsci_handler m=skip already inspected
+2026-11-12T21:45:35.809022821Z 2026/11/12 21:45:35 [debug] 32#32: *2806 http script copy: "X-Request-ID"
+2026-11-12T21:45:35.809036406Z 2026/11/12 21:45:35 [debug] 32#32: *2806 http proxy header: "X-SigSci-AgentResponse: 200"
+2026-11-12T21:45:35.809037072Z 2026/11/12 21:45:35 [debug] 32#32: *2806 http proxy header: "X-SigSci-Agent: disabled"
+2026-11-12T21:45:35.809785627Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci_process_end_request: response-time: 1 ms: resp-status=200 : resp-bytes-sent=102 : hdr-resp-bytes=3 : uri=/ req-post-len=0
+2026-11-12T21:45:35.809786377Z 2026/11/12 21:45:35 [debug] 32#32: *2806 sigsci_process_end_request: 1 ms: on_end_request complete: req-pos-len=0

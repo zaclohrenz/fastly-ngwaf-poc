@@ -1,0 +1,10 @@
+2026-11-12T23:05:38.071770713Z 2026/11/12 23:05:38.071685 Signal Sciences Agent 4.83.2 starting as user sigsci with PID 1, Max open files=2147483584, Max data size=unlimited, Max address space=unlimited, Max stack size=8388608
+2026-11-12T23:05:38.072751504Z 2026/11/12 23:05:38.072708 =====================================================
+2026-11-12T23:05:38.072758046Z 2026/11/12 23:05:38.072714 Agent:     ingress-nginx-controller-75598b4cf9-ck4x6
+2026-11-12T23:05:38.072759337Z 2026/11/12 23:05:38.072715 System:    alpine 3.24.3 (linux 7.1.4-200.fc44.aarch64)
+2026-11-12T23:05:38.072760087Z 2026/11/12 23:05:38.072716 Memory:    4.509G / 5.756G RAM available
+2026-11-12T23:05:38.072760754Z 2026/11/12 23:05:38.072716 CPU:       2 MaxProcs / 5 CPU cores available
+2026-11-12T23:05:38.072761337Z 2026/11/12 23:05:38.072717 =====================================================
+2026-11-12T23:06:38.136703332Z 2026/11/12 23:06:38.136593 Config update failed try 1: unable to update config: failed to download using cdn, direct and failover urls: unable to process request: Get "https://wafconf.signalsciences.net/4/00000000-0000-0000-0000-000000000000.conf": context deadline exceeded (Client.Timeout exceeded while awaiting headers), unable to process request: Get "https://sigsci-agent-wafconf.s3.amazonaws.com/4/00000000-0000-0000-0000-000000000000.conf": context deadline exceeded (Client.Timeout exceeded while awaiting headers), unable to process request: Get "https://sigsci-agent-wafconf-us-west-2.s3.amazonaws.com/4/00000000-0000-0000-0000-000000000000.conf": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2026-11-12T23:06:38.137206831Z 2026/11/12 23:06:38.137105 Started RPC listener on "unix:/sigsci/tmp/sigsci.sock"
+2026-11-12T23:06:53.138169112Z 2026/11/12 23:06:53.138003 Failed initial upload: upload failure: Post "https://c.signalsciences.net/0/push": context deadline exceeded (Client.Timeout exceeded while awaiting headers)

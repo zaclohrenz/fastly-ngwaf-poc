@@ -1,0 +1,163 @@
+Signal Sciences Agent 4.83.2 (build 2978 09c19fc884efca91cdab58fca046b4b52b61a80a)
+
+Usage: /sigsci/bin/sigsci-agent [options]
+Options:
+  --accesskeyid=string | SIGSCI_ACCESSKEYID=string
+        Set access key ID, required in most cases
+  --anonymous-ip-secret-key=string | SIGSCI_ANONYMOUS_IP_SECRET_KEY=string
+        Set anonymous IP secret key. Default is to use `secretaccesskey` when generating anonymous IP addresses
+  --bypass-egress-proxy-for-upstreams=boolean | SIGSCI_BYPASS_EGRESS_PROXY_FOR_UPSTREAMS=bool [EXPERIMENTAL]
+        Exclude all upstream traffic from using the egress proxy [dynamic] (default false)
+  --cleaner-interval=time-duration | SIGSCI_CLEANER_INTERVAL=time-duration
+        How often to run cleanup routine [dynamic] (default 10s)
+  --client-ip-header=string | SIGSCI_CLIENT_IP_HEADER=string
+        Specify the request header containing the client IP address [dynamic] (default X-Forwarded-For)
+  --config=string | SIGSCI_CONFIG=string
+        Specify the configuration file (default /etc/sigsci/agent.conf)
+  --context-expiration=time-duration | SIGSCI_CONTEXT_EXPIRATION=time-duration
+        How long to keep request context to match with response before cleanup [dynamic] (default 10s)
+  --custom-request-headers=string | SIGSCI_CUSTOM_REQUEST_HEADERS=string [EXPERIMENTAL]
+        Add custom headers to the RPC response, which will be added to the HTTP request by the module [format is CSV if name:val pairs with $AgentResponse, $RequestID, $TagList dynamic values] [dynamic]
+  --debug-log-all-the-things=boolean | SIGSCI_DEBUG_LOG_ALL_THE_THINGS=bool [EXPERIMENTAL]
+        Log all the things [dynamic] (default false)
+  --debug-log-blocked-requests=boolean | SIGSCI_DEBUG_LOG_BLOCKED_REQUESTS=bool [EXPERIMENTAL]
+        Log when a request is blocked [dynamic] (default false)
+  --debug-log-config-updates=integer | SIGSCI_DEBUG_LOG_CONFIG_UPDATES=integer [EXPERIMENTAL]
+        Log when config updated or checked, 0=off, 1=updated, 2=more details [dynamic] (default 0)
+  --debug-log-connection-errors=integer | SIGSCI_DEBUG_LOG_CONNECTION_ERRORS=integer [EXPERIMENTAL]
+        Log when connections are dropped due an error. 0=off,1=on [dynamic] (default 0)
+  --debug-log-engine-errors=integer | SIGSCI_DEBUG_LOG_ENGINE_ERRORS=integer [EXPERIMENTAL]
+        Log WAF engine errors: 0=off, 1=on, 2=verbose [dynamic] (default 1)
+  --debug-log-proxy-requests=boolean | SIGSCI_DEBUG_LOG_PROXY_REQUESTS=bool [EXPERIMENTAL]
+        Generates debug output of proxied requests [dynamic] (default false)
+  --debug-log-rpc-data=string | SIGSCI_DEBUG_LOG_RPC_DATA=string [EXPERIMENTAL]
+        Log (hexdump) raw RPC data to the given file
+  --debug-log-uploads=integer | SIGSCI_DEBUG_LOG_UPLOADS=integer [EXPERIMENTAL]
+        Log what is being sent to Signal Sciences: 0=off, 1=json, 2=json-pretty [dynamic] (default 0)
+  --debug-log-web-inputs=integer | SIGSCI_DEBUG_LOG_WEB_INPUTS=integer [EXPERIMENTAL]
+        Log web inputs coming from the module: 0=off, 1=json, 2=json-pretty [dynamic] (default 0)
+  --debug-log-web-outputs=integer | SIGSCI_DEBUG_LOG_WEB_OUTPUTS=integer [EXPERIMENTAL]
+        Log web outputs going back to the module: 0=off,1=json,2=json-pretty [dynamic] (default 0)
+  --debug-standalone=integer | SIGSCI_DEBUG_STANDALONE=integer [EXPERIMENTAL]
+        Bitfield: 0=normal, 1=no upload, 2=no download, 3=no networking, 4=use empty rules, 7=no net+empty rules (default 0)
+  --download-cdn-url=string | SIGSCI_DOWNLOAD_CDN_URL=string [EXPERIMENTAL]
+        CDN URL to check and download new configurations before checking download-url, empty string disables CDN fetch [dynamic] (default https://wafconf.signalsciences.net)
+  --download-config-cache=string | SIGSCI_DOWNLOAD_CONFIG_CACHE=string
+        Filename to cache latest downloaded config (if relative, then base it on shared-cache-dir)
+  --download-config-version=integer | SIGSCI_DOWNLOAD_CONFIG_VERSION=integer [EXPERIMENTAL]
+        Force the downloader to download a specific config version: 0=auto versioning (default 0)
+  --download-failover-url=string | SIGSCI_DOWNLOAD_FAILOVER_URL=string [EXPERIMENTAL]
+        URL to check and download new configurations if download-url is not available [dynamic] (default https://sigsci-agent-wafconf-us-west-2.s3.amazonaws.com)
+  --download-interval=time-duration | SIGSCI_DOWNLOAD_INTERVAL=time-duration [EXPERIMENTAL]
+        How often to check for a new configuration [dynamic] (default 30s)
+  --download-url=string | SIGSCI_DOWNLOAD_URL=string [EXPERIMENTAL]
+        URL to check and download new configurations [dynamic] (default https://sigsci-agent-wafconf.s3.amazonaws.com)
+  --envoy-expect-response-data=integer | SIGSCI_ENVOY_EXPECT_RESPONSE_DATA=integer [EXPERIMENTAL]
+        Expect response data from envoy: 0=response data is not expected and some dependent product features will not be available, 1=agent will wait for response data via http_grpc_access_log gRPC API (default 0)
+  --envoy-extproc-enabled=boolean | SIGSCI_ENVOY_EXTPROC_ENABLED=bool [EXPERIMENTAL]
+        Envoy External Processor enabled (default false)
+  --envoy-grpc-address=string | SIGSCI_ENVOY_GRPC_ADDRESS=string [EXPERIMENTAL]
+        Envoy gRPC address to listen on (unix domain socket path or host:port)
+  --envoy-grpc-cert=string | SIGSCI_ENVOY_GRPC_CERT=string [EXPERIMENTAL]
+        Envoy gRPC optional TLS cert file (PEM format)
+  --envoy-grpc-key=string | SIGSCI_ENVOY_GRPC_KEY=string [EXPERIMENTAL]
+        Envoy gRPC optional TLS key file (PEM format)
+  --haproxy-spoa-address=string | SIGSCI_HAPROXY_SPOA_ADDRESS=string
+        Haproxy SPOA address to listen on (unix domain socket path or host:port) (default unix:/var/run/sigsci-ha.sock)
+  --haproxy-spoa-enabled=boolean | SIGSCI_HAPROXY_SPOA_ENABLED=bool
+        Haproxy SPOA agent enabled (default false)
+  --haproxy-spoa-lua-enabled=boolean | SIGSCI_HAPROXY_SPOA_LUA_ENABLED=bool
+        Haproxy SPOA Lua support enabled to edit response headers (default false)
+  --help
+        Dump basic help text
+  --inspection-alt-response-codes=csv-integer | SIGSCI_INSPECTION_ALT_RESPONSE_CODES=csv-integer [DEPRECATED]
+        DO NOT USE: the alternative response code concept is deprecated - all codes 300-599 are now considered blocking codes and this option will be removed [dynamic]
+  --inspection-anomaly-duration=time-duration | SIGSCI_INSPECTION_ANOMALY_DURATION=time-duration [EXPERIMENTAL]
+        Envoy/revproxy global duration after which the request will be considered an anomaly and the response will be inspected even if nothing else was found in the request during inspection [dynamic] (default 1s)
+  --inspection-anomaly-size=integer | SIGSCI_INSPECTION_ANOMALY_SIZE=integer [EXPERIMENTAL]
+        Envoy/revproxy global response size limit which the request will be considered an anomaly and the response will be inspected even if nothing else was found in the request during inspection [dynamic] (default 524288)
+  --inspection-debug=boolean | SIGSCI_INSPECTION_DEBUG=bool [EXPERIMENTAL]
+        Envoy/revproxy global enable/disable inspection debug logging [dynamic] (default false)
+  --inspection-max-content-length=integer | SIGSCI_INSPECTION_MAX_CONTENT_LENGTH=integer [EXPERIMENTAL]
+        Envoy/revproxy global max request content length that is allowed to be inspected [dynamic] (default 307200)
+  --inspection-timeout=time-duration | SIGSCI_INSPECTION_TIMEOUT=time-duration [EXPERIMENTAL]
+        Envoy/revproxy global inspection timeout after which the system will fail open [dynamic] (default 100ms)
+  --jaeger-tracing=boolean | SIGSCI_JAEGER_TRACING=bool [EXPERIMENTAL]
+        Enables jaeger tracing - configured with `JAEGER_*` environment variables (currently for envoy only) (default false)
+  --legal
+        Show legal information and exit
+  --local-networks=string | SIGSCI_LOCAL_NETWORKS=string
+        Set local networks for determining the real client IP (CSV of CIDR, 'all', 'none', or 'private'). These are the networks trusted to set the client IP header. [dynamic] (default all)
+  --log-out=string | SIGSCI_LOG_OUT=string
+        Log output location, 'stderr', 'stdout', or file name (NOTE: on Windows, important logs will be sent to the eventlog)
+  --max-backlog=integer | SIGSCI_MAX_BACKLOG=integer
+        Maximum RPC requests in queue (by default scaled with rpc-workers) [dynamic] (default 0)
+  --max-connections=integer | SIGSCI_MAX_CONNECTIONS=integer
+        Maximum in-flight RPC connections (by default scaled with rpc-workers) [dynamic] (default 0)
+  --max-inspecting=integer | SIGSCI_MAX_INSPECTING=integer [DEPRECATED]
+        Reverse proxy only - maximum in-flight transactions that the engine can be inspecting, 0=unlimited [dynamic] (default 0)
+  --max-logs=integer | SIGSCI_MAX_LOGS=integer
+        Maximum number of log lines held while waiting to send upstream [dynamic] (default 1000)
+  --max-procs=string | SIGSCI_MAX_PROCS=string
+        Maximum number or percentage of CPUs (cores) to use (e.g., `max-procs=4` or `max-procs="100%"`). For more information, check out our guide on [allocating resources for the agent](https://www.fastly.com/documentation/guides/next-gen-waf/setup-and-configuration/agent-management/allocating-resources-for-the-agent/#average-number-of-usable-cpu-cores). [dynamic]
+  --max-records=integer | SIGSCI_MAX_RECORDS=integer
+        Maximum number of records held while waiting to send (by default scaled with rpc-workers) [dynamic] (default 0)
+  --reverse-proxy=boolean | SIGSCI_REVERSE_PROXY=bool [DEPRECATED]
+        Enable the reverse proxy, which requires setting a listener and upstream (default false)
+  --reverse-proxy-tls-min-version=string | SIGSCI_REVERSE_PROXY_TLS_MIN_VERSION=string [DEPRECATED]
+        Reverse proxy TLS listener min version [dynamic] (default 1.0)
+  --revproxy-listener=value | SIGSCI_REVPROXY_LISTENER=value
+        Define named reverse proxy listener(s) with options (block or revproxy-listener="name1:{opt=val,...};name2:{opt=val,...};...") [dynamic]
+  --revproxy-reload-on-update=boolean | SIGSCI_REVPROXY_RELOAD_ON_UPDATE=bool [EXPERIMENTAL]
+        Reload the reverse proxy service config on agent config updates to support dynamic reconfiguration (only functions on OSes that support zero downtime restarts such as Linux >= 3.9 kernel) [dynamic] (default false)
+  --rpc-address=string | SIGSCI_RPC_ADDRESS=string
+        RPC address to listen on and serve modules from (default unix:/var/run/sigsci.sock)
+  --rpc-version=integer | SIGSCI_RPC_VERSION=integer [DEPRECATED]
+        RPC protocol version [dynamic] (default 0)
+  --rpc-workers=integer | SIGSCI_RPC_WORKERS=integer [EXPERIMENTAL]
+        RPC workers to use. If unset, then the `max-procs` value will be used [dynamic] (default 0)
+  --sample-percent=integer | SIGSCI_SAMPLE_PERCENT=integer
+        Sample input, 100=process everything, 0=ignore everything [dynamic] (default 100)
+  --secretaccesskey=string | SIGSCI_SECRETACCESSKEY=string
+        Set secretaccesskey, required along with accesskeyid in most cases
+  --server-flavor=string | SIGSCI_SERVER_FLAVOR=string [EXPERIMENTAL]
+        Server-flavor, allow distinguishing this revproxy install as a buildpack or other flavor. [dynamic]
+  --server-hostname=string | SIGSCI_SERVER_HOSTNAME=string
+        Server hostname. By default, the agent asks the OS for the hostname configuration unless a value is configured here.
+  --service-shutdown-timeout=time-duration | SIGSCI_SERVICE_SHUTDOWN_TIMEOUT=time-duration
+        Timeout waiting for pending transactions to complete during service shutdown [dynamic] (default 2s)
+  --shared-cache-dir=string | SIGSCI_SHARED_CACHE_DIR=string [EXPERIMENTAL]
+        Base directory for any cache files (default /tmp/sigsci-agent.cache)
+  --show-tls-cipher-suites
+        Show available TLS cipher suites and exit
+  --startup-probe-filepath=string | SIGSCI_STARTUP_PROBE_FILEPATH=string [EXPERIMENTAL]
+        Filepath to create file checked by startup probes. Creates the file once the agent has loaded a ruleset. Ex: /sigsci/tmp/startup
+  --startup-probe-listener=string | SIGSCI_STARTUP_PROBE_LISTENER=string [EXPERIMENTAL]
+        HTTP listener for responding to startup probes. Returns HTTP 200 once the agent has loaded a ruleset. Ex: 0.0.0.0:2024
+  --statsd-address=string | SIGSCI_STATSD_ADDRESS=string
+        Set the statsd address to send metrics to (e.g., `hostname:port` or `unix:///path/socket`)
+  --statsd-metrics=csv-string | SIGSCI_STATSD_METRICS=csv-string [EXPERIMENTAL]
+        Set the statsd metrics filter (glob patterns allowed - assumed prefix if no patterns used) (default *)
+  --statsd-type=string | SIGSCI_STATSD_TYPE=string [EXPERIMENTAL]
+        Set the statsd server type to enable advanced features (e.g., `statsd` or `dogstatsd`) (default statsd)
+  --upload-log=string | SIGSCI_UPLOAD_LOG=string [EXPERIMENTAL]
+        Log filename to write agent event data
+  --upload-log-header-map=boolean | SIGSCI_UPLOAD_LOG_HEADER_MAP=bool [EXPERIMENTAL]
+        HTTP request,response header data in map format (default false)
+  --upload-syslog=boolean | SIGSCI_UPLOAD_SYSLOG=bool [EXPERIMENTAL]
+        Write agent event data to syslog (default false)
+  --upload-url=string | SIGSCI_UPLOAD_URL=string [EXPERIMENTAL]
+        URL to upload agent data [dynamic] (default https://c.signalsciences.net/0/push)
+  --usage
+        Dump full usage text
+  --validate-config=boolean | SIGSCI_VALIDATE_CONFIG=bool
+        Validate the config entries provided to warn against potentially invalid entries (default true)
+  --version
+        Show version information and exit
+  --waf-data-log=string | SIGSCI_WAF_DATA_LOG=string [EXPERIMENTAL]
+        Filename to log WAF inspection data (currently JSON format). Using "eventlog" on Windows will send these to the eventlog. Requests are logged to the provided location if they have at least one signal added by default inspectors or if they have at least one signal added by a request rule with a Request logging value of Sampled. [dynamic]
+  --waf-data-log-all=boolean | SIGSCI_WAF_DATA_LOG_ALL=bool [EXPERIMENTAL]
+        When logging WAF inspection data, log every request not just those with signals. [dynamic] (default false)
+  --windows-eventlog-level=integer | SIGSCI_WINDOWS_EVENTLOG_LEVEL=integer [EXPERIMENTAL]
+        Set the windows eventlog level (use names that will be converted to integers: `debug`, `info`, `warning`, `error`, or `none`). [dynamic] (default 3)
+

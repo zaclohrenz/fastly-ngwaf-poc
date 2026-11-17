@@ -1,0 +1,5 @@
+1794527249.516 ingress-nginx-controller-5777644b7f-bsvwx   <none>   Pending   <none>
+1794527249.518 ingress-nginx-controller-5777644b7f-bsvwx   <none>   Pending   <none>
+1794527249.524 ingress-nginx-controller-5777644b7f-bsvwx   False    Pending   false,false
+1794527250.457 ingress-nginx-controller-5777644b7f-bsvwx   False    Running   false,true
+1794527259.837 ingress-nginx-controller-5777644b7f-bsvwx   True     Running   true,true

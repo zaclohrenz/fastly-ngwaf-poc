@@ -1,0 +1,5 @@
+total 0
+drwxrwxrwx    3 root     root            38 Nov 12 23:08 .
+drwxr-xr-x    3 root     root            17 Nov 12 23:07 ..
+drwxr-x---    3 100      101             60 Nov 12 23:07 cache
+srwxrwxrwx    1 100      101              0 Nov 12 23:08 sigsci.sock

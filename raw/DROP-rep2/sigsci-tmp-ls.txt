@@ -1,0 +1,6 @@
+total 4032
+drwxrwxrwx    3 root     root            53 Nov 12 22:58 .
+drwxr-xr-x    3 root     root            17 Nov 12 22:57 ..
+drwxr-x---    3 100      101             61 Nov 12 22:57 cache
+-rw-r--r--    1 100      101        3743578 Nov 12 22:59 rpc.hex
+srwxrwxrwx    1 100      101              0 Nov 12 22:58 sigsci.sock

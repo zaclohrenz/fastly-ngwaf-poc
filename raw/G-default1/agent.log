@@ -1,0 +1,11 @@
+2026-11-12T22:09:05.580438629Z 2026/11/12 22:09:05.580325 Signal Sciences Agent 4.83.2 starting as user sigsci with PID 1, Max open files=2147483584, Max data size=unlimited, Max address space=unlimited, Max stack size=8388608
+2026-11-12T22:09:05.581585252Z 2026/11/12 22:09:05.581539 =====================================================
+2026-11-12T22:09:05.581604085Z 2026/11/12 22:09:05.581546 Agent:     ingress-nginx-controller-55fb7d45d9-r9r2q
+2026-11-12T22:09:05.581606085Z 2026/11/12 22:09:05.581547 System:    alpine 3.24.3 (linux 7.1.4-200.fc44.aarch64)
+2026-11-12T22:09:05.581606752Z 2026/11/12 22:09:05.581547 Memory:    4.468G / 5.756G RAM available
+2026-11-12T22:09:05.581607419Z 2026/11/12 22:09:05.581548 CPU:       2 MaxProcs / 5 CPU cores available
+2026-11-12T22:09:05.581608002Z 2026/11/12 22:09:05.581548 =====================================================
+2026-11-12T22:10:05.647914583Z 2026/11/12 22:10:05.647707 Config update failed try 1: unable to update config: failed to download using cdn, direct and failover urls: unable to process request: Get "https://wafconf.signalsciences.net/4/00000000-0000-0000-0000-000000000000.conf": context deadline exceeded (Client.Timeout exceeded while awaiting headers), unable to process request: Get "https://sigsci-agent-wafconf.s3.amazonaws.com/4/00000000-0000-0000-0000-000000000000.conf": context deadline exceeded (Client.Timeout exceeded while awaiting headers), unable to process request: Get "https://sigsci-agent-wafconf-us-west-2.s3.amazonaws.com/4/00000000-0000-0000-0000-000000000000.conf": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2026-11-12T22:10:05.650095163Z 2026/11/12 22:10:05.649977 Started RPC listener on "unix:/sigsci/tmp/sigsci.sock"
+2026-11-12T22:10:20.649888064Z 2026/11/12 22:10:20.649809 Failed initial upload: upload failure: Post "https://c.signalsciences.net/0/push": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2026-11-12T22:11:05.651871181Z 2026/11/12 22:11:05.651771 Failed periodic upload: upload failure: Post "https://c.signalsciences.net/0/push": context deadline exceeded (Client.Timeout exceeded while awaiting headers)

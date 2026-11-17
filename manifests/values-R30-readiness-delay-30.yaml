@@ -1,0 +1,44 @@
+# Fastly sigsci-values.yaml layout, DEFAULT logging + controller readinessProbe.initialDelaySeconds=30 (no error-log-level override). DUMMY keys (format-valid, not real credentials) - agent can never authenticate.
+controller:
+  image:
+    repository: localhost/sigsci-nginx-ingress-controller
+    tag: "1.15.1-fastly1.4.0"
+    pullPolicy: Never
+    digest: ""
+  replicaCount: 1
+  readinessProbe:
+    initialDelaySeconds: 30
+  admissionWebhooks: {enabled: false}
+  service: {type: ClusterIP}
+  config:
+    main-snippet: load_module /usr/lib/nginx/modules/ngx_http_sigsci_module.so;
+    http-snippet: sigsci_agent_host unix:/sigsci/tmp/sigsci.sock;
+  extraInitContainers:
+  - name: wait-egress-blocked   # lab only: avoids a CNI policy-programming race at pod start (see REPORT)
+    image: localhost/py:3.12-alpine
+    imagePullPolicy: Never
+    command: [python, -u, -c]
+    args:
+    - |
+      import socket, time
+      ok = 0
+      for i in range(120):
+          try:
+              socket.create_connection(("wafconf.signalsciences.net", 443), timeout=1).close(); ok = 0
+          except Exception:
+              ok += 1
+          if ok >= 3: print("egress blocked, proceeding", flush=True); break
+          time.sleep(0.5)
+  extraContainers:
+  - name: sigsci-agent
+    image: localhost/sigsci-agent:4.83.2
+    imagePullPolicy: Never
+    securityContext: {readOnlyRootFilesystem: true}
+    volumeMounts: [{name: sigsci-temp, mountPath: /sigsci/tmp}]
+    env:
+    - {name: SIGSCI_RPC_ADDRESS, value: "unix:/sigsci/tmp/sigsci.sock"}
+    - {name: SIGSCI_ACCESSKEYID, value: "00000000-0000-0000-0000-000000000000"}
+    - {name: SIGSCI_SECRETACCESSKEY, value: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+
+  extraVolumeMounts: [{name: sigsci-temp, mountPath: /sigsci/tmp}]
+  extraVolumes: [{name: sigsci-temp, emptyDir: {}}]

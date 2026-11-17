@@ -1,0 +1,32 @@
+{
+ "run": "B-rep2",
+ "T0": 1794520340.228,
+ "agent_start": 15.17,
+ "first_config_attempt_failed": 75.23,
+ "rpc_socket_created": 75.23,
+ "endpoints_ready": null,
+ "probe_first_503": 15.19,
+ "probe_first_200": null,
+ "n_requests": 1916,
+ "n_reached_upstream": 0,
+ "n_attack_payloads_reached_upstream": 0,
+ "n_attack_reached_upstream_while_socket_absent": 0,
+ "n_attack_reached_upstream_while_socket_present_no_rules": 0,
+ "module_timeout_messages": 0,
+ "counts": [
+  {
+   "phase": "1_pod_not_serving",
+   "module": "",
+   "upstream": "no-upstream",
+   "client_status": "ERR",
+   "n": 1605
+  },
+  {
+   "phase": "3_socket_present_no_rules",
+   "module": "",
+   "upstream": "no-upstream",
+   "client_status": "ERR",
+   "n": 311
+  }
+ ]
+}

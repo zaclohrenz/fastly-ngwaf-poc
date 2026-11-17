@@ -1,0 +1,7 @@
+1794528699.073 ingress-nginx-controller-74b5f4466-g4zqh   <none>   Pending   <none>
+1794528699.075 ingress-nginx-controller-74b5f4466-g4zqh   <none>   Pending   <none>
+1794528699.082 ingress-nginx-controller-74b5f4466-g4zqh   False    Pending   false,false
+1794528699.977 ingress-nginx-controller-74b5f4466-g4zqh   False    Pending   false,false
+1794528714.022 ingress-nginx-controller-74b5f4466-g4zqh   False    Pending   false,false
+1794528715.026 ingress-nginx-controller-74b5f4466-g4zqh   False    Running   false,true
+1794528729.399 ingress-nginx-controller-74b5f4466-g4zqh   True     Running   true,true

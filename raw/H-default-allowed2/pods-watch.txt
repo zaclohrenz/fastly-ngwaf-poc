@@ -1,0 +1,5 @@
+1794525535.038 ingress-nginx-controller-586df55c85-s47sd   <none>   Pending   <none>
+1794525535.039 ingress-nginx-controller-586df55c85-s47sd   <none>   Pending   <none>
+1794525535.044 ingress-nginx-controller-586df55c85-s47sd   False    Pending   false,false
+1794525535.955 ingress-nginx-controller-586df55c85-s47sd   False    Running   false,true
+1794525545.361 ingress-nginx-controller-586df55c85-s47sd   True     Running   true,true

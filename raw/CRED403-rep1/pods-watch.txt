@@ -1,0 +1,7 @@
+1794523540.613 ingress-nginx-controller-6fdd54585f-55gwk   <none>   Pending   <none>
+1794523540.618 ingress-nginx-controller-6fdd54585f-55gwk   <none>   Pending   <none>
+1794523540.625 ingress-nginx-controller-6fdd54585f-55gwk   False    Pending   false,false
+1794523541.252 ingress-nginx-controller-6fdd54585f-55gwk   False    Pending   false,false
+1794523604.439 ingress-nginx-controller-6fdd54585f-55gwk   False    Pending   false,false
+1794523605.444 ingress-nginx-controller-6fdd54585f-55gwk   False    Running   false,true
+1794523620.941 ingress-nginx-controller-6fdd54585f-55gwk   True     Running   true,true

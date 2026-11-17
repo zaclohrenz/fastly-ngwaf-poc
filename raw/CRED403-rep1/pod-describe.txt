@@ -1,0 +1,139 @@
+Name:             ingress-nginx-controller-6fdd54585f-55gwk
+Namespace:        ingress-nginx
+Priority:         0
+Service Account:  ingress-nginx
+Node:             ngwaf-control-plane/10.89.0.2
+Start Time:       Thu, 12 Nov 2026 16:45:40 -0600
+Labels:           app.kubernetes.io/component=controller
+                  app.kubernetes.io/instance=ingress-nginx
+                  app.kubernetes.io/managed-by=Helm
+                  app.kubernetes.io/name=ingress-nginx
+                  app.kubernetes.io/part-of=ingress-nginx
+                  app.kubernetes.io/version=1.15.1
+                  helm.sh/chart=ingress-nginx-4.15.1
+                  pod-template-hash=6fdd54585f
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.65
+IPs:
+  IP:           10.244.0.65
+Controlled By:  ReplicaSet/ingress-nginx-controller-6fdd54585f
+Init Containers:
+  wait-egress-blocked:
+    Container ID:  containerd://e39717d7d77ce5e03c9c8c961323f35302dc27077c9b62c6198a66abe22ab225
+    Image:         localhost/py:3.12-alpine
+    Image ID:      docker.io/library/import-2026-11-12@sha256:e6714c28a1d002cb2c92c0729e1146bc9e22dce4483ce6b9ee13c29e7f7ce853
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      python
+      -u
+      -c
+    Args:
+      import socket, time
+      ok = 0
+      for i in range(120):
+          try:
+              socket.create_connection(("wafconf.signalsciences.net", 443), timeout=1).close(); ok = 0
+          except Exception:
+              ok += 1
+          if ok >= 3: print("egress blocked, proceeding", flush=True); break
+          time.sleep(0.5)
+      
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 12 Nov 2026 16:45:41 -0600
+      Finished:     Thu, 12 Nov 2026 16:46:43 -0600
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-rh49h (ro)
+Containers:
+  controller:
+    Container ID:    containerd://88f5be5f239174c8aa328f2eecf4ba376f317aa7a38e3cc4c21b9681fd4f4b05
+    Image:           localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0
+    Image ID:        docker.io/library/import-2026-11-12@sha256:7e030f68d2fac0cbd275c1acf084ec818939df86d9692d0bd2bfa41215b67b63
+    Ports:           80/TCP (http), 443/TCP (https)
+    Host Ports:      0/TCP (http), 0/TCP (https)
+    SeccompProfile:  RuntimeDefault
+    Args:
+      /nginx-ingress-controller
+      --publish-service=$(POD_NAMESPACE)/ingress-nginx-controller
+      --election-id=ingress-nginx-leader
+      --controller-class=k8s.io/ingress-nginx
+      --ingress-class=nginx
+      --configmap=$(POD_NAMESPACE)/ingress-nginx-controller
+    State:          Running
+      Started:      Thu, 12 Nov 2026 16:46:44 -0600
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:      100m
+      memory:   90Mi
+    Liveness:   http-get http://:10254/healthz delay=10s timeout=1s period=10s successThreshold=1 failureThreshold=5
+    Readiness:  http-get http://:10254/healthz delay=10s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Environment:
+      POD_NAME:       ingress-nginx-controller-6fdd54585f-55gwk (v1:metadata.name)
+      POD_NAMESPACE:  ingress-nginx (v1:metadata.namespace)
+      LD_PRELOAD:     /usr/local/lib/libmimalloc.so
+    Mounts:
+      /sigsci/tmp from sigsci-temp (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-rh49h (ro)
+  sigsci-agent:
+    Container ID:   containerd://289a26dc37db1fb4d770ff73352caa62947abc6eade051c28faa79bd87e21703
+    Image:          localhost/sigsci-agent:4.83.2
+    Image ID:       docker.io/library/import-2026-11-12@sha256:b20a74b9a432b29e3505782ed7e6fe3941f7d95e14c32cf69eefb35953f13548
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Thu, 12 Nov 2026 16:46:44 -0600
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      SIGSCI_RPC_ADDRESS:         unix:/sigsci/tmp/sigsci.sock
+      SIGSCI_ACCESSKEYID:         00000000-0000-0000-0000-000000000000
+      SIGSCI_SECRETACCESSKEY:     <dummy-secret>
+      SIGSCI_STATSD_ADDRESS:      statsd.ngwaf.svc.cluster.local:8125
+      SIGSCI_DEBUG_LOG_RPC_DATA:  /sigsci/tmp/rpc.hex
+      SIGSCI_DEBUG_LOG_UPLOADS:   1
+    Mounts:
+      /sigsci/tmp from sigsci-temp (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-rh49h (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  sigsci-temp:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-rh49h:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              kubernetes.io/os=linux
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From                      Message
+  ----    ------     ----  ----                      -------
+  Normal  Scheduled  2m3s  default-scheduler         Successfully assigned ingress-nginx/ingress-nginx-controller-6fdd54585f-55gwk to ngwaf-control-plane
+  Normal  Pulled     2m3s  kubelet                   spec.initContainers{wait-egress-blocked}: Container image "localhost/py:3.12-alpine" already present on machine
+  Normal  Created    2m3s  kubelet                   spec.initContainers{wait-egress-blocked}: Created container wait-egress-blocked
+  Normal  Started    2m2s  kubelet                   spec.initContainers{wait-egress-blocked}: Started container wait-egress-blocked
+  Normal  Pulled     59s   kubelet                   spec.containers{controller}: Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+  Normal  Created    59s   kubelet                   spec.containers{controller}: Created container controller
+  Normal  Started    59s   kubelet                   spec.containers{controller}: Started container controller
+  Normal  Pulled     59s   kubelet                   spec.containers{sigsci-agent}: Container image "localhost/sigsci-agent:4.83.2" already present on machine
+  Normal  Created    59s   kubelet                   spec.containers{sigsci-agent}: Created container sigsci-agent
+  Normal  Started    59s   kubelet                   spec.containers{sigsci-agent}: Started container sigsci-agent
+  Normal  RELOAD     58s   nginx-ingress-controller  NGINX reload triggered due to a change in configuration

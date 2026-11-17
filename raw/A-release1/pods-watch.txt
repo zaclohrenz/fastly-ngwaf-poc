@@ -1,0 +1,7 @@
+1794521172.106 ingress-nginx-controller-55fb7d45d9-dpmdf   <none>   Pending   <none>
+1794521172.109 ingress-nginx-controller-55fb7d45d9-dpmdf   <none>   Pending   <none>
+1794521172.128 ingress-nginx-controller-55fb7d45d9-dpmdf   False    Pending   false,false
+1794521173.012 ingress-nginx-controller-55fb7d45d9-dpmdf   False    Pending   false,false
+1794521187.081 ingress-nginx-controller-55fb7d45d9-dpmdf   False    Pending   false,false
+1794521188.075 ingress-nginx-controller-55fb7d45d9-dpmdf   False    Running   false,true
+1794521202.440 ingress-nginx-controller-55fb7d45d9-dpmdf   True     Running   true,true

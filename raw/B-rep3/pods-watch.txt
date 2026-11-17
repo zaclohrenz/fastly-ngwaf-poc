@@ -1,0 +1,7 @@
+1794520470.692 ingress-nginx-controller-7d6dfb4f4d-7wq6w   <none>   Pending   <none>
+1794520470.695 ingress-nginx-controller-7d6dfb4f4d-7wq6w   <none>   Pending   <none>
+1794520470.712 ingress-nginx-controller-7d6dfb4f4d-7wq6w   False    Pending   false,false
+1794520471.615 ingress-nginx-controller-7d6dfb4f4d-7wq6w   False    Pending   false,false
+1794520485.666 ingress-nginx-controller-7d6dfb4f4d-7wq6w   False    Pending   false,false
+1794520486.664 ingress-nginx-controller-7d6dfb4f4d-7wq6w   False    Running   false,false
+1794520501.020 ingress-nginx-controller-7d6dfb4f4d-7wq6w   False    Running   true,false

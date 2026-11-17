@@ -1,0 +1,5 @@
+1794529160.336 ingress-nginx-controller-5777644b7f-lcw6w   <none>   Pending   <none>
+1794529160.339 ingress-nginx-controller-5777644b7f-lcw6w   <none>   Pending   <none>
+1794529160.345 ingress-nginx-controller-5777644b7f-lcw6w   False    Pending   false,false
+1794529161.224 ingress-nginx-controller-5777644b7f-lcw6w   False    Running   false,true
+1794529170.657 ingress-nginx-controller-5777644b7f-lcw6w   True     Running   true,true

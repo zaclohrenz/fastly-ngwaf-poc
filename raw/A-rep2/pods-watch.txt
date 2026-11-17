@@ -1,0 +1,7 @@
+1794519976.383 ingress-nginx-controller-55fb7d45d9-n6bdj   <none>   Pending   <none>
+1794519976.387 ingress-nginx-controller-55fb7d45d9-n6bdj   <none>   Pending   <none>
+1794519976.396 ingress-nginx-controller-55fb7d45d9-n6bdj   False    Pending   false,false
+1794519977.267 ingress-nginx-controller-55fb7d45d9-n6bdj   False    Pending   false,false
+1794519991.307 ingress-nginx-controller-55fb7d45d9-n6bdj   False    Pending   false,false
+1794519992.313 ingress-nginx-controller-55fb7d45d9-n6bdj   False    Running   false,true
+1794520006.715 ingress-nginx-controller-55fb7d45d9-n6bdj   True     Running   true,true

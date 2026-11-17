@@ -1,0 +1,7 @@
+1794527550.270 ingress-nginx-controller-74b5f4466-sq588   <none>   Pending   <none>
+1794527550.271 ingress-nginx-controller-74b5f4466-sq588   <none>   Pending   <none>
+1794527550.277 ingress-nginx-controller-74b5f4466-sq588   False    Pending   false,false
+1794527551.199 ingress-nginx-controller-74b5f4466-sq588   False    Pending   false,false
+1794527565.233 ingress-nginx-controller-74b5f4466-sq588   False    Pending   false,false
+1794527566.240 ingress-nginx-controller-74b5f4466-sq588   False    Running   false,true
+1794527580.592 ingress-nginx-controller-74b5f4466-sq588   True     Running   true,true

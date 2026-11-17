@@ -1,0 +1,7 @@
+1794528029.428 ingress-nginx-controller-6fdd54585f-njnwc   <none>   Pending   <none>
+1794528029.430 ingress-nginx-controller-6fdd54585f-njnwc   <none>   Pending   <none>
+1794528029.437 ingress-nginx-controller-6fdd54585f-njnwc   False    Pending   false,false
+1794528030.324 ingress-nginx-controller-6fdd54585f-njnwc   False    Pending   false,false
+1794528032.335 ingress-nginx-controller-6fdd54585f-njnwc   False    Pending   false,false
+1794528033.344 ingress-nginx-controller-6fdd54585f-njnwc   False    Running   false,true
+1794528049.753 ingress-nginx-controller-6fdd54585f-njnwc   True     Running   true,true

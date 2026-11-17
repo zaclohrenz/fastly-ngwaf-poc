@@ -1,0 +1,7 @@
+1794525725.477 ingress-nginx-controller-55fb7d45d9-vpr98   <none>   Pending   <none>
+1794525725.479 ingress-nginx-controller-55fb7d45d9-vpr98   <none>   Pending   <none>
+1794525725.485 ingress-nginx-controller-55fb7d45d9-vpr98   False    Pending   false,false
+1794525726.398 ingress-nginx-controller-55fb7d45d9-vpr98   False    Pending   false,false
+1794525740.442 ingress-nginx-controller-55fb7d45d9-vpr98   False    Pending   false,false
+1794525741.444 ingress-nginx-controller-55fb7d45d9-vpr98   False    Running   false,true
+1794525755.797 ingress-nginx-controller-55fb7d45d9-vpr98   True     Running   true,true

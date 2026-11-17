@@ -1,0 +1,7 @@
+1794523700.780 ingress-nginx-controller-6fdd54585f-5wws9   <none>   Pending   <none>
+1794523700.785 ingress-nginx-controller-6fdd54585f-5wws9   <none>   Pending   <none>
+1794523700.795 ingress-nginx-controller-6fdd54585f-5wws9   False    Pending   false,false
+1794523701.700 ingress-nginx-controller-6fdd54585f-5wws9   False    Pending   false,false
+1794523764.849 ingress-nginx-controller-6fdd54585f-5wws9   False    Pending   false,false
+1794523765.856 ingress-nginx-controller-6fdd54585f-5wws9   False    Running   false,true
+1794523781.110 ingress-nginx-controller-6fdd54585f-5wws9   True     Running   true,true

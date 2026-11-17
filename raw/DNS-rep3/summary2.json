@@ -1,0 +1,69 @@
+{
+ "run": "DNS-rep3",
+ "controller_startedAt": "2026-11-12T22:35:00Z",
+ "agent_first_cfg_attempt_ended": 0.94,
+ "socket_created": 0.94,
+ "agent_log_socket_line": 9,
+ "pod_Ready": 19.0,
+ "agent_log_lines": [
+  "2026/11/12 22:35:00.851722 Signal Sciences Agent 4.83.2 starting as user sigsci with PID 1, Max open files=2147483584, Max data size=unlimited, Max address space=unlimite",
+  "2026/11/12 22:35:00.863517 =====================================================",
+  "2026/11/12 22:35:00.863524 Agent:     ingress-nginx-controller-6fdd54585f-gs8mk",
+  "2026/11/12 22:35:00.863525 System:    alpine 3.24.3 (linux 7.1.4-200.fc44.aarch64)",
+  "2026/11/12 22:35:00.863526 Memory:    4.507G / 5.756G RAM available",
+  "2026/11/12 22:35:00.863526 CPU:       2 MaxProcs / 5 CPU cores available",
+  "2026/11/12 22:35:00.863527 =====================================================",
+  "2026/11/12 22:35:00.939049 Config update failed try 1: unable to update config: failed to download using cdn, direct and failover urls: unable to process request: Get \"ht",
+  "2026/11/12 22:35:00.939393 Started RPC listener on \"unix:/sigsci/tmp/sigsci.sock\"",
+  "2026/11/12 22:35:00.939404 uploading to https://c.signalsciences.net/0/push: {\"Meta\":{\"ServerHostname\":\"ingress-nginx-controller-6fdd54585f-gs8mk\",\"ServerOS\":\"linux/alpin",
+  "2026/11/12 22:35:00.944889 Failed initial upload: upload failure: Post \"https://c.signalsciences.net/0/push\": dial tcp: lookup c.signalsciences.net on 10.96.0.10:53: no s",
+  "2026/11/12 22:35:30.945869 uploading to https://c.signalsciences.net/0/push: {\"Meta\":{\"ServerHostname\":\"ingress-nginx-controller-6fdd54585f-gs8mk\",\"ServerOS\":\"linux/alpin",
+  "2026/11/12 22:35:30.952198 Failed periodic upload: upload failure: Post \"https://c.signalsciences.net/0/push\": dial tcp: lookup c.signalsciences.net on 10.96.0.10:53: no ",
+  "2026/11/12 22:35:30.961237 Config update failed try 2: unable to update config: failed to download using cdn, direct and failover urls: unable to process request: Get \"ht",
+  "2026/11/12 22:36:00.945911 uploading to https://c.signalsciences.net/0/push: {\"Meta\":{\"ServerHostname\":\"ingress-nginx-controller-6fdd54585f-gs8mk\",\"ServerOS\":\"linux/alpin",
+  "2026/11/12 22:36:00.948697 Failed periodic upload: upload failure: Post \"https://c.signalsciences.net/0/push\": dial tcp: lookup c.signalsciences.net on 10.96.0.10:53: no ",
+  "2026/11/12 22:36:00.959278 Config update failed try 3: unable to update config: failed to download using cdn, direct and failover urls: unable to process request: Get \"ht",
+  "2026/11/12 22:36:30.945664 uploading to https://c.signalsciences.net/0/push: {\"Meta\":{\"ServerHostname\":\"ingress-nginx-controller-6fdd54585f-gs8mk\",\"ServerOS\":\"linux/alpin",
+  "2026/11/12 22:36:30.951004 Failed periodic upload: upload failure: Post \"https://c.signalsciences.net/0/push\": dial tcp: lookup c.signalsciences.net on 10.96.0.10:53: no ",
+  "2026/11/12 22:36:30.959099 Config update failed try 4: unable to update config: failed to download using cdn, direct and failover urls: unable to process request: Get \"ht",
+  "2026/11/12 22:37:00.946050 uploading to https://c.signalsciences.net/0/push: {\"Meta\":{\"ServerHostname\":\"ingress-nginx-controller-6fdd54585f-gs8mk\",\"ServerOS\":\"linux/alpin",
+  "2026/11/12 22:37:00.952190 Failed periodic upload: upload failure: Post \"https://c.signalsciences.net/0/push\": dial tcp: lookup c.signalsciences.net on 10.96.0.10:53: no ",
+  "2026/11/12 22:37:00.955679 Config update failed try 5: unable to update config: failed to download using cdn, direct and failover urls: unable to process request: Get \"ht"
+ ],
+ "first_upstream_hit": 19.16,
+ "upstream_by_phase_and_sigsci_header": {
+  "socket_present_disabled | X-SigSci-AgentResponse=200;X-SigSci-Agent=disabled": 2100
+ },
+ "attack_payloads_upstream_by_phase": {
+  "socket_present_disabled": 1680
+ },
+ "upstream_after_Ready_total": 2100,
+ "nginx_module_lines_by_phase": {
+  "socket_present_disabled | [notice] sigsci_init_main_conf: Using default UDS socket: /var/run/sigsci.sock": 1,
+  "socket_present_disabled | [notice] sigsci:init: setting phase REWRITE: ngx-phase=3": 1
+ },
+ "statsd_counters_sum": {
+  "sigsci.agent.rpc.tx.contexts_expired": 0,
+  "sigsci.agent.rpc.version.0": 1,
+  "sigsci.agent.rpc.tx.dropped.engine_disabled": 1494,
+  "sigsci.agent.waf.total": 1494,
+  "sigsci.agent.waf.allow": 1494,
+  "sigsci.agent.download.error": 2
+ },
+ "statsd_first_last_rel_socket": [
+  30.0,
+  90.0
+ ],
+ "rpc_decoded": {
+  "requests": {
+   "RPC.PreRequest": 2130
+  },
+  "with_X_Request_ID_generator_traffic": 2106,
+  "without_X_Request_ID_controller_internal": 24,
+  "responses": {
+   "{\"RequestHeaders\": [[\"X-SigSci-Agent\", \"disabled\"]], \"RequestID\": \"\", \"WAFResponse\": 200}": 2130
+  },
+  "decode_errors": 0,
+  "non_rpc_blocks": 1
+ }
+}

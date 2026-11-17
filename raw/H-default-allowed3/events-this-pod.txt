@@ -1,0 +1,9 @@
+2026-11-12T23:25:15Z   ingress-nginx   Normal    Scheduled           ingress-nginx-controller-586df55c85-gwdql   Successfully assigned ingress-nginx/ingress-nginx-controller-586df55c85-gwdql to ngwaf-control-plane
+2026-11-12T23:25:15Z   ingress-nginx   Normal    SuccessfulCreate    ingress-nginx-controller-586df55c85         Created pod: ingress-nginx-controller-586df55c85-gwdql
+2026-11-12T23:25:16Z   ingress-nginx   Normal    Started             ingress-nginx-controller-586df55c85-gwdql   Started container sigsci-agent
+2026-11-12T23:25:16Z   ingress-nginx   Normal    Created             ingress-nginx-controller-586df55c85-gwdql   Created container sigsci-agent
+2026-11-12T23:25:16Z   ingress-nginx   Normal    Pulled              ingress-nginx-controller-586df55c85-gwdql   Container image "localhost/sigsci-nginx-ingress-controller:1.15.1-fastly1.4.0" already present on machine
+2026-11-12T23:25:16Z   ingress-nginx   Normal    Started             ingress-nginx-controller-586df55c85-gwdql   Started container controller
+2026-11-12T23:25:16Z   ingress-nginx   Normal    Created             ingress-nginx-controller-586df55c85-gwdql   Created container controller
+2026-11-12T23:25:16Z   ingress-nginx   Normal    Pulled              ingress-nginx-controller-586df55c85-gwdql   Container image "localhost/sigsci-agent:4.83.2" already present on machine
+2026-11-12T23:25:17Z   ingress-nginx   Normal    RELOAD              ingress-nginx-controller-586df55c85-gwdql   NGINX reload triggered due to a change in configuration

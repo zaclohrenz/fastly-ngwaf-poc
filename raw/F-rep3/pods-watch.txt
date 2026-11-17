@@ -1,0 +1,7 @@
+1794520981.729 ingress-nginx-controller-bf9fc6b8c-28f9l   <none>   Pending   <none>
+1794520981.734 ingress-nginx-controller-bf9fc6b8c-28f9l   <none>   Pending   <none>
+1794520981.740 ingress-nginx-controller-bf9fc6b8c-28f9l   False    Pending   false,false
+1794520982.668 ingress-nginx-controller-bf9fc6b8c-28f9l   False    Pending   false,false
+1794520996.711 ingress-nginx-controller-bf9fc6b8c-28f9l   False    Pending   false,false
+1794520997.717 ingress-nginx-controller-bf9fc6b8c-28f9l   False    Running   false,true
+1794521012.057 ingress-nginx-controller-bf9fc6b8c-28f9l   True     Running   true,true
