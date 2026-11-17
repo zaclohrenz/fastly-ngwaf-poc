@@ -1,6 +1,6 @@
 # Fastly Next-Gen WAF agent: fail-open before rules load (test evidence)
 
-Evidence for the writeup [Fastly Next-Gen WAF Agent: Fail-Open During Kubernetes Pod Startup](https://zaclohrenz.com/posts/cve/fastly-nextgen-waf/). CVE requested from MITRE CNA-LR on 2026-09-29; status pending.
+Evidence for the writeup [Fastly Next-Gen WAF Agent: Fail-Open During Kubernetes Pod Startup](https://zaclohrenz.com/posts/cve/fastly-nextgen-waf/). 
 
 ## Finding
 
@@ -57,7 +57,7 @@ The access keys in the manifests are format-valid dummy values (`00000000-0000-0
 sha256sum -c SHA256SUMS
 ```
 
-`SHA256SUMS` covers the evidence as collected on 2026-11-12 and 2026-11-13. This README was added afterward and is not included in it.
+`SHA256SUMS` covers the evidence as collected on 2026-11-12 and 2026-11-13. This README was added afterward and is not included in it. `REPORT.md` was edited for publication on 2026-11-17 (environment notes trimmed), so the check reports that one file as changed; the original is in commit `32930cd`. Every file under `raw/`, `manifests/` and `src/` is unchanged.
 
 ## Reproduce
 

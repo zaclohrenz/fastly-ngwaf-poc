@@ -19,9 +19,8 @@ All paths below are relative to `results/`. Times are seconds after the containe
 | Digest check | Both images were pulled **by the index digests above**; local `RepoDigests` contain them and `crictl images` in the kind node shows the same image IDs. |
 | Chart | ingress-nginx 4.15.1 (app 1.15.1), image overridden to the local copies (`digest: ""`) |
 
-## 2. Environment and deviations from the brief
+## 2. Environment
 
-- macOS arm64. Docker.app on this machine is broken (executable missing), so kind runs on **podman** (`KIND_EXPERIMENTAL_PROVIDER=podman`, machine set to rootful, 6 GiB). Node image `kindest/node:v1.31.0`. Installed with brew: kind, kubectl, socat, helm.
 - Layout follows Fastly's `sigsci-values.yaml` from the GitHub repo (module via `main-snippet`, `sigsci_agent_host unix:/sigsci/tmp/sigsci.sock`, agent as `extraContainers`, shared `emptyDir`). Variant B adds `SIGSCI_STARTUP_PROBE_LISTENER=0.0.0.0:2024` + `startupProbe` (`/startup`, `failureThreshold: 90`, `periodSeconds: 2`) exactly as in the Kubernetes Agent + Module guide.
 - Egress hold: a NetworkPolicy (`manifests/netpol-block-agent-egress.yaml`) allowing only cluster DNS and 10.0.0.0/8. Endpoints were taken from the agent's own log: `wafconf.signalsciences.net`, `sigsci-agent-wafconf.s3.amazonaws.com`, `sigsci-agent-wafconf-us-west-2.s3.amazonaws.com` (config), `c.signalsciences.net/0/push` (upload).
 - **Lab-only init container** `wait-egress-blocked` (in variants A/B/D/E/F/G): the first pilot showed the CNI had not yet programmed the policy when the agent made its first request, so the first download leaked to Fastly (403). The init container waits until the connection is observed blocked. Consequence: container start is ~15 s after pod creation, which is why times are reported from container `startedAt`. Variant H (egress allowed) has no init container and no NetworkPolicy.
