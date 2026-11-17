@@ -1,6 +1,6 @@
 # Fastly Next-Gen WAF agent: fail-open before rules load (test evidence)
 
-Evidence for the writeup [Fastly Next-Gen WAF Agent: Fail-Open During Kubernetes Pod Startup](https://zaclohrenz.com/posts/cve/cve5/). CVE requested from MITRE CNA-LR on 2026-09-29; status pending.
+Evidence for the writeup [Fastly Next-Gen WAF Agent: Fail-Open During Kubernetes Pod Startup](https://zaclohrenz.com/posts/cve/fastly-nextgen-waf/). CVE requested from MITRE CNA-LR on 2026-09-29; status pending.
 
 ## Finding
 
